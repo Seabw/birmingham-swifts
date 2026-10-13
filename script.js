@@ -290,18 +290,29 @@ function initMobileMenu() {
   const navMenu = document.getElementById('nav-menu');
 
   if (toggleBtn && navMenu) {
-    toggleBtn.addEventListener('click', () => {
-      const isVisible = navMenu.style.display === 'flex';
-      navMenu.style.display = isVisible ? 'none' : 'flex';
-      if (!isVisible) {
-        navMenu.style.flexDirection = 'column';
-        navMenu.style.position = 'absolute';
-        navMenu.style.top = '72px';
-        navMenu.style.left = '0';
-        navMenu.style.width = '100%';
-        navMenu.style.background = 'var(--bg-secondary)';
-        navMenu.style.padding = '20px';
-        navMenu.style.boxShadow = 'var(--shadow-lg)';
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navMenu.classList.toggle('mobile-open');
+      toggleBtn.textContent = isOpen ? '✕' : '☰';
+      toggleBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when any nav link or button inside is clicked
+    const navLinks = navMenu.querySelectorAll('.nav-link, a, button');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-open');
+        toggleBtn.textContent = '☰';
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close when tapping anywhere outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        navMenu.classList.remove('mobile-open');
+        toggleBtn.textContent = '☰';
+        toggleBtn.setAttribute('aria-expanded', 'false');
       }
     });
   }
