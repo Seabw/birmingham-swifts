@@ -2356,17 +2356,8 @@ body.has-alert .hero-section {
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.55;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   flex-grow: 1;
-}
-
-.leader-favorite {
-  font-size: 0.82rem;
-  color: #38bdf8;
-  font-weight: 500;
-  margin: 0;
-  padding-top: 10px;
-  border-top: 1px solid var(--border-color);
 }
 
 /* Light Theme Adjustments */
