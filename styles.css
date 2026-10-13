@@ -654,8 +654,10 @@ body.has-alert .hero-section {
 
 .run-card-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   margin-bottom: 16px;
 }
 
@@ -667,6 +669,18 @@ body.has-alert .hero-section {
   padding: 4px 12px;
   border-radius: var(--radius-full);
   text-transform: uppercase;
+}
+
+.run-day-badge.official {
+  background: rgba(2, 132, 199, 0.22);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.run-day-badge.unofficial {
+  background: rgba(168, 85, 247, 0.18);
+  color: #c084fc;
+  border: 1px solid rgba(192, 132, 252, 0.35);
 }
 
 .run-time {
@@ -944,7 +958,7 @@ body.has-alert .hero-section {
 }
 
 .pricing-card.featured::before {
-  content: 'MOST POPULAR';
+  content: 'COMMUNITY SUPPORTER';
   position: absolute;
   top: -12px;
   left: 50%;
@@ -1509,6 +1523,12 @@ body.has-alert .hero-section {
   .testimonial-card,
   .pricing-card {
     padding: 20px 16px;
+  }
+
+  .run-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .run-title {

@@ -50,10 +50,9 @@ Controls the weekly run timetable cards and day filtering on the website.
 
 | day | day_label | time | title | location | description | paces | active |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `tuesday` | `Tuesday Evening` | `⏰ 6:45 PM – 8:00 PM` | `Speed, Intervals & Track Training` | `University of Birmingham Track` | `Structured interval workout to build endurance.` | `All Abilities, Coached Intervals, Floodlit Track` | `TRUE` |
-| `thursday` | `Thursday Evening` | `⏰ 7:00 PM Meet` | `Main Club Social Run (5k/7k/10k)` | `Nightingale Club, Gay Village` | `Our flagship club run along the canals. 5 pace groups.` | `Walk / Jog, 7:00-8:00, 6:00-7:00, 5:00-6:00, <5:00` | `TRUE` |
-| `saturday` | `Saturday Morning` | `⏰ 8:45 AM Meet` | `Swifts Parkrun Tourism & Coffee` | `Cannon Hill / Edgbaston / Perry Hall` | `Join the Swifts team at local 5k parkruns followed by coffee.` | `Free 5km, Tourism, Coffee & Cake` | `TRUE` |
-| `sunday` | `Sunday Morning` | `⏰ 9:30 AM Meet` | `Sunday Social Long Run (10k-21k)` | `Sutton Park / Lickey Hills` | `Longer scenic trail miles preparing for half marathons.` | `10k-15k, Half Marathon, Scenic Trails` | `TRUE` |
+| `thursday` | `Thursday Evening • Main Run` | `⏰ 6:50 PM Meet (7:00 PM Start)` | `Main Club Social Run (5k/7k/10k & Walk-to-Run)` | `Pagoda Island, Bath Row / Gay Village` | `Our official flagship weekly club run along Birmingham canals with 5 pace groups plus Walk-to-Run.` | `Walk-to-Run, 7:00-8:00, 6:00-7:00, 5:00-6:00, <5:00` | `TRUE` |
+| `saturday` | `Saturday Morning • Unofficial` | `⏰ 8:45 AM Meet (9:00 AM Start)` | `Swifts Parkrun Tour & Social Coffee` | `Cannon Hill / Edgbaston / Perry Hall` | `Unofficial weekly club meet-ups at local Birmingham 5k parkruns followed by coffee.` | `5k Community, Local Parkruns, All Paces, Coffee & Chat` | `TRUE` |
+| `sunday` | `Sunday Morning • Unofficial` | `⏰ 9:00 AM / 9:30 AM Meet` | `Sunday Long Run (Half, Marathon & Ultra Training)` | `Sutton Park / Lickey Hills / Canals` | `Unofficial long distance runs for half marathons, full marathons, or ultras (10k to 30k+).` | `10k-30k+ Distance, Half & Full Marathon, Ultra Endurance, Scenic Trails` | `TRUE` |
 
 *💡 Tip: Set `active` to `FALSE` to temporarily hide a run if cancelled for weather or bank holidays.*
 
@@ -75,9 +74,9 @@ Controls the membership cards, prices, and bullet point benefits.
 
 | title | cost | period | features | featured |
 | :--- | :--- | :--- | :--- | :--- |
-| `Free Taster` | `£0` | `first session` | `Join any Tuesday or Thursday run, Meet run leaders and members, No commitment required, Tail walker support guarantee` | `FALSE` |
-| `Full Swifts Member` | `£15` | `year` | `Access to all 4 weekly runs, Official club kit discount, Entry to Swiftember leagues, Private WhatsApp & Strava club, Social nights & awards dinner` | `TRUE` |
-| `England Athletics Affiliated` | `£35` | `year` | `All Full Swifts Member benefits, Official EA registration, £2 discount on UK road races, London Marathon club ballot, Personal race insurance` | `FALSE` |
+| `Club Runner & Tasters` | `£0` | `open to all` | `Join Thursday social runs & weekend meetups, All 5+ pace groups and Walk-to-Run, Friendly run leaders & tail walkers, Post-run social drinks at The Fox` | `FALSE` |
+| `Club Supporter Member` | `£15` | `year` | `Official Birmingham Swifts membership, Club kit discounts, Swiftember challenge entry & awards, Private club WhatsApp & community, Supports club equipment & run leader training` | `TRUE` |
+| `England Athletics Affiliated` | `£35` | `year` | `All Club Supporter benefits included, Official EA registration, £2+ discount on UK road & trail races, London Marathon club ballot entry, Personal race insurance` | `FALSE` |
 
 ---
 

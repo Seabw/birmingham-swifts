@@ -88,7 +88,7 @@ function updateThemeIcon(btn, theme) {
 }
 
 /* --------------------------------------------------------------------------
-   3. Weekly Schedule Day Filter (All / Tuesday / Thursday / Saturday / Sunday)
+   3. Weekly Schedule Day Filter (All / Thursday / Saturday / Sunday)
    -------------------------------------------------------------------------- */
 function initScheduleFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -124,29 +124,29 @@ function initPaceMatcher() {
 
   const paceRecommendations = {
     walk: {
-      title: "🐣 Recommended: Couch to 5k / Walk-to-Run Group",
+      title: "🐣 Group 5 / Starting Out (Walk-to-Run)",
       desc: "Gentle intervals of walking and jogging with patient run leaders. Ideal if you're returning to running or starting fresh!",
-      day: "Thursday Club Social Run at 7:00 PM"
+      day: "Thursday Social Run (6:50 PM Meet, Pagoda Island)"
     },
     slow: {
-      title: "🟢 Recommended: Group 4 & 5 (7:00 – 8:00 min/km)",
-      desc: "Super relaxed, chatty group covering ~5 km. Tail walker guaranteed, regular regroup stops.",
-      day: "Thursday Club Social Run at 7:00 PM"
+      title: "🟢 Group 4 (7:00 – 8:00 min/km)",
+      desc: "Super relaxed, chatty group covering ~5 km. Tail walker guaranteed with regular regroup stops.",
+      day: "Thursday Social Run & Saturday Parkruns"
     },
     mid: {
-      title: "🎯 Recommended: Group 3 (6:00 – 6:45 min/km)",
+      title: "🎯 Group 3 (6:00 – 6:45 min/km)",
       desc: "Our most popular social pace! Covers 6–7 km at a steady conversational pace along the Birmingham canals.",
-      day: "Thursday Club Social Run & Tuesday Track"
+      day: "Thursday Social Run (Main Run) & Saturday Parkruns"
     },
     fast: {
-      title: "⚡️ Recommended: Group 2 (5:00 – 5:45 min/km)",
+      title: "⚡️ Group 2 (5:00 – 5:45 min/km)",
       desc: "Brisk pace covering 8–10 km with continuous cadence. Great for half-marathon and 10k race training.",
-      day: "Thursday Club Social Run & Tuesday Track"
+      day: "Thursday Social Run & Sunday Long Run"
     },
     speed: {
-      title: "🚀 Recommended: Group 1 (< 4:45 min/km) & Tuesday Track",
-      desc: "Fast pace covering 10–12 km, plus structured interval speed workouts on the track.",
-      day: "Tuesday Track (6:45 PM) & Thursday Fast Group"
+      title: "🚀 Group 1 (< 4:45 min/km) & Long Distance",
+      desc: "Fast pace covering 10–12 km on Thursdays, plus weekend half, marathon, and ultra-distance endurance training.",
+      day: "Thursday Social Run (Group 1) & Sunday Long Run"
     }
   };
 
@@ -208,8 +208,7 @@ function initTasterModal() {
       e.preventDefault();
       const specificRun = btn.getAttribute('data-run');
       if (specificRun && sessionSelect) {
-        if (specificRun.includes('Tuesday')) sessionSelect.value = 'tuesday';
-        else if (specificRun.includes('Thursday')) sessionSelect.value = 'thursday';
+        if (specificRun.includes('Thursday')) sessionSelect.value = 'thursday';
         else if (specificRun.includes('Saturday')) sessionSelect.value = 'saturday';
         else if (specificRun.includes('Sunday')) sessionSelect.value = 'sunday';
       }
@@ -242,7 +241,7 @@ function initTasterModal() {
           <div style="font-size: 3rem; margin-bottom: 12px;">🎉</div>
           <h4 style="font-size: 1.4rem; color: #10b981; margin-bottom: 8px;">You're All Set, ${name}!</h4>
           <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px;">
-            We've reserved your free spot for: <strong>${session}</strong>.<br>
+            We've reserved your spot for: <strong>${session}</strong>.<br>
             A Run Leader will email you with meet point details. Welcome to Swifts!
           </p>
           <button class="btn btn-primary" onclick="document.getElementById('taster-modal').classList.remove('active')">

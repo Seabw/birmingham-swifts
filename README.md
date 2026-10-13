@@ -13,9 +13,9 @@ Modern, accessible, and high-performance website for **Birmingham Swifts Running
   * High-resolution atmospheric photography and official Swifts logo assets.
 
 * **⚡️ Interactive Modules**:
-  * **Weekly Run Timetable & Day Filter**: Filter by Tuesday Track, Thursday Social, Saturday Parkrun, and Sunday Long Run.
+  * **Weekly Run Timetable & Day Filter**: Filter by Thursday Social (Main Run), Saturday Parkruns (Unofficial), and Sunday Long Runs (Unofficial).
   * **Interactive Pace Matcher**: Immediate recommendation of group pace and session based on 5k target times.
-  * **Free Taster Booking Modal**: Interactive sign-up dialog with instant feedback toast.
+  * **Taster Booking Modal**: Interactive sign-up dialog with instant feedback toast.
   * **Initiatives Spotlight**: Dedicated cards for Couch to 5k (C25K), Swiftember Challenge, and Social/Pride calendar.
   * **Community Voices**: Authentic testimonials from beginners, marathoners, and ultra runners.
   * **Collapsible FAQ Accordion**: Instant answers to common beginner and club questions.
