@@ -1740,7 +1740,7 @@ body.has-alert .hero-section {
   color: #ffffff;
   background: linear-gradient(135deg, rgba(2, 132, 199, 0.3), rgba(236, 72, 153, 0.25));
   border-color: #38bdf8;
-  transform: translateY(-2px) translateX(2px);
+  transform: translateY(-2px);
   box-shadow: 0 0 18px var(--swifts-blue-glow);
 }
 

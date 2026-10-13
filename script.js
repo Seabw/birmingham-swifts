@@ -121,6 +121,7 @@ function initScheduleFilter() {
 function initPaceMatcher() {
   const matcherBtns = document.querySelectorAll('.matcher-btn');
   const resultBox = document.getElementById('matcher-result');
+  if (!resultBox || matcherBtns.length === 0) return;
 
   const paceRecommendations = {
     walk: {

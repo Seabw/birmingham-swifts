@@ -9,7 +9,7 @@
   
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Weekly Runs — Birmingham Swifts Running Club">
-  <meta property="og:description" content="Join our 3 weekly runs catering to all distances and paces. Complete beginners to marathoners, with 5 pace groups and tail walkers.">
+  <meta property="og:description" content="Join our 3 weekly runs catering to all distances and abilities. Complete beginners to marathoners, with run leaders and tail walkers.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/hero_running_crew.jpg">
 
@@ -82,7 +82,7 @@
       </div>
       <h1 class="subpage-hero-title">Weekly Runs &amp; Sessions</h1>
       <p class="subpage-hero-desc">
-        We organize three regular weekly sessions across Birmingham. Every pace is supported by trained run leaders and tail walkers with zero fees.
+        We organize three regular weekly sessions across Birmingham. Every runner is supported by trained run leaders and tail walkers with zero fees.
       </p>
     </div>
   </header>
@@ -115,14 +115,13 @@
             📍 <span>Pagoda Island, Bath Row / Gay Village, Birmingham</span>
           </div>
           <p class="run-description">
-            Our official flagship weekly club session along Birmingham's canal towpaths and illuminated street routes. Features 5 distinct pace groups plus a dedicated Starting Out / Walk-to-Run group. Bag drop and restrooms available before departure, followed by social drinks at The Fox!
+            Our official flagship weekly club session along Birmingham's canal towpaths and illuminated street routes. Welcomes runners and walkers of all abilities with a dedicated Starting Out / Walk-to-Run group. Bag drop and restrooms available before departure, followed by social drinks at The Fox!
           </p>
           <div class="run-paces-list">
-            <span class="pace-pill">Walk-to-Run (Starting Out)</span>
-            <span class="pace-pill">Group 4: 7:00-8:00 /km</span>
-            <span class="pace-pill">Group 3: 6:00-7:00 /km</span>
-            <span class="pace-pill">Group 2: 5:00-6:00 /km</span>
-            <span class="pace-pill">Group 1: &lt; 5:00 /km</span>
+            <span class="pace-pill">Walk-to-Run</span>
+            <span class="pace-pill">5k &amp; 7k Routes</span>
+            <span class="pace-pill">All Abilities Welcome</span>
+            <span class="pace-pill">Tail Walkers</span>
           </div>
           <button class="btn btn-primary run-select-btn" data-run="Thursday Main Club Social">
             Book Thursday Taster
@@ -178,28 +177,6 @@
         </article>
       </div>
 
-      <!-- Interactive Pace Matcher Widget -->
-      <div class="pace-matcher-box" style="margin-top: 48px;">
-        <h3 style="font-size: 1.45rem; margin-bottom: 8px;">🤔 Unsure which group fits your pace?</h3>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-          Click your typical 5k time or running pace below, and we'll match you to your ideal Swifts group!
-        </p>
-
-        <div class="matcher-options" id="matcher-options">
-          <button class="matcher-btn" data-pace="walk">Beginner / Walk-Run</button>
-          <button class="matcher-btn" data-pace="slow">35–40+ min (7:00-8:00 /km)</button>
-          <button class="matcher-btn selected" data-pace="mid">28–34 min (6:00-6:45 /km)</button>
-          <button class="matcher-btn" data-pace="fast">24–27 min (5:00-5:45 /km)</button>
-          <button class="matcher-btn" data-pace="speed">Sub 23 min (&lt; 4:45 /km)</button>
-        </div>
-
-        <div class="matcher-result" id="matcher-result">
-          🎯 <strong>Recommended: Group 3 (6:00 – 6:45 min/km)</strong><br>
-          <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">
-            A friendly, conversational pace covering ~6-7 km on Thursday nights with tail walkers. Perfect for building stamina!
-          </span>
-        </div>
-      </div>
 
       <!-- What to Expect / First Timer FAQ Card -->
       <article class="about-narrative-card" style="margin-top: 48px;">
@@ -222,7 +199,7 @@
       <div class="subpage-cta-box">
         <h3>Join Us This Thursday!</h3>
         <p>
-          Let us know you're coming so our run leaders can greet you, answer any questions, and pair you with the best pace group.
+          Let us know you're coming so our run leaders can greet you, answer any questions, and welcome you to our friendly community.
         </p>
         <button class="btn btn-rainbow open-taster-btn">
           🏃‍♂️ Book a Taster Run
@@ -264,13 +241,12 @@
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="taster-pace">Approximate Pace / Experience</label>
+          <label class="form-label" for="taster-pace">Running Experience</label>
           <select id="taster-pace" class="form-select">
             <option value="beginner">Beginner / Walk-to-Run (Couch to 5k)</option>
-            <option value="easy">Casual 5k (35-40 min / 7:00-8:00 min/km)</option>
-            <option value="steady">Steady 5k (28-34 min / 6:00-6:45 min/km)</option>
-            <option value="brisk">Brisk 5k (24-27 min / 5:00-5:45 min/km)</option>
-            <option value="fast">Fast 5k (&lt; 23 min / &lt; 4:45 min/km)</option>
+            <option value="casual">Casual / Social Runner</option>
+            <option value="intermediate">Regular 5k–10k Runner</option>
+            <option value="experienced">Long Distance / Experienced Runner</option>
           </select>
         </div>
 
