@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaches &amp; Run Leaders — Birmingham Swifts Running Club</title>
+  <meta name="description" content="Meet our 3 England Athletics qualified coaches and our team of 15 volunteer Run Leaders who guide and support every Birmingham Swifts session.">
+  <meta name="keywords" content="Birmingham Swifts coaches, England Athletics coaches, LiRF run leaders Birmingham, gay running club leaders, inclusive running Birmingham">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Coaches &amp; Run Leaders — Birmingham Swifts Running Club">
+  <meta property="og:description" content="Meet our 3 England Athletics qualified coaches and our 15 volunteer Run Leaders who support every runner and make sure no one is left behind.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero_running_crew.jpg">
+
+  <!-- Favicon / Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/swifts_logo.jpg">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=2.6">
+</head>
+<body>
+
+  <!-- Top Pride Strip -->
+  <div class="pride-strip"></div>
+
+  <!-- Live Announcement Alert Bar -->
+  <aside class="live-alert-bar" id="live-announcement-bar" style="display: none;">
+    <span class="live-alert-icon">📣</span>
+    <span class="live-alert-text" id="live-announcement-text">
+      Welcome to Birmingham Swifts! Join our Thursday flagship social run in the Gay Village.
+    </span>
+    <button class="live-alert-close" id="live-alert-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" id="brand-logo-link">
+        <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          <span class="nav-brand-subtitle">LGBTQ+ & Allies Running Club</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="runs.html" class="nav-link">Weekly Runs</a></li>
+        <li><a href="news.html" class="nav-link">Club News</a></li>
+        <li><a href="committee.html" class="nav-link">Committee</a></li>
+        <li><a href="coaches-leaders.html" class="nav-link active">Coaches &amp; Run Leaders</a></li>
+        <li><a href="members.html" class="nav-link">Members</a></li>
+        <li><a href="join.html" class="nav-link">Join Us</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li class="mobile-only-action">
+          <button class="btn btn-primary open-taster-btn mobile-menu-cta">🏃‍♂️ Book a Taster Run</button>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          🌙
+        </button>
+        <button class="btn btn-primary" id="open-taster-modal-btn">
+          🏃‍♂️ Book a Taster Run
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="Open mobile menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SUBPAGE HERO
+       ========================================================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <div class="subpage-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <span>Coaches &amp; Run Leaders</span>
+      </div>
+      <h1 class="subpage-hero-title">Coaches &amp; Run Leaders</h1>
+      <p class="subpage-hero-desc">
+        Meet our qualified England Athletics coaching staff and our enthusiastic team of volunteer Run Leaders who keep every Swifts run safe, welcoming, and inspiring.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT
+       ========================================================================== -->
+  <main class="subpage-content">
+    <div class="container">
+
+      <!-- Team Overview Narrative Card -->
+      <article class="about-narrative-card">
+        <h3>Certified Coaching &amp; Dedicated Run Leadership</h3>
+        <p>
+          At Birmingham Swifts, safety, encouragement, and inclusive athletic development go hand in hand. Every weekly run is supported by certified volunteers who give their time freely so you can enjoy your running journey without stress or pressure:
+        </p>
+        <p>
+          <strong>England Athletics Qualified Coaches (3 Coaches):</strong> Our coaches hold certified England Athletics qualifications (Coach in Running Fitness / Coaching Assistant). They design progressive training cycles, coach safe running biomechanics, and provide tailored marathon and endurance guidance.
+        </p>
+        <p style="margin-bottom: 0;">
+          <strong>Volunteer Run Leaders (15 Leaders):</strong> Certified through England Athletics' <em>Leadership in Running Fitness (LiRF)</em> program. They plan and lead our Thursday routes along Birmingham's waterways, manage weekend parkruns, supervise our Walk-to-Run groups, and act as tail walkers ensuring <em>no runner is ever left behind</em>.
+        </p>
+      </article>
+
+      <!-- ====================================================================
+           SECTION 1: THE 3 EA QUALIFIED COACHES
+           ==================================================================== -->
+      <div class="team-section-divider">
+        <span class="section-tag">STRUCTURED TRAINING &amp; DEVELOPMENT</span>
+        <h2 class="team-section-title">EA Qualified Coaches</h2>
+        <p class="team-section-desc">
+          Guiding your fitness with professional England Athletics accreditation, sports science principles, and genuine encouragement.
+        </p>
+      </div>
+
+      <div class="coaches-grid">
+
+        <!-- Coach 1 -->
+        <article class="coach-card">
+          <div class="coach-img-wrap">
+            <img src="assets/portrait_coach.jpg" alt="Coach Sarah Jenkins" class="coach-img">
+          </div>
+          <span class="coach-badge">EA Coach in Running Fitness (CiRF)</span>
+          <h3 class="coach-name">Sarah Jenkins</h3>
+          <div class="coach-specialty">Head Coach • Endurance &amp; Marathon Lead</div>
+          <p class="coach-desc">
+            Sarah has been coaching with Swifts for over 7 years. A veteran of 18 marathons and numerous ultras, she creates our structured autumn and spring marathon training plans. She focuses on sustainable aerobic conditioning, race-day nutrition strategies, and keeping running joyful.
+          </p>
+          <div class="coach-quote">
+            "Consistency beats intensity every single time. My goal is to help every Swift cross their finish line smiling and injury-free."
+          </div>
+        </article>
+
+        <!-- Coach 2 -->
+        <article class="coach-card">
+          <div class="coach-img-wrap">
+            <img src="assets/portrait_chair.jpg" alt="Coach Alex Morgan" class="coach-img">
+          </div>
+          <span class="coach-badge">EA Coaching Assistant &amp; CiRF</span>
+          <h3 class="coach-name">Alex Morgan</h3>
+          <div class="coach-specialty">Foundation &amp; Couch to 5k Lead Coach</div>
+          <p class="coach-desc">
+            Alex leads our beginner development and Couch to 5k programs. With a background in sports physiotherapy, Alex specializes in safe biomechanics, gradual impact progression, and helping nervous first-timers discover that they belong in the running world.
+          </p>
+          <div class="coach-quote">
+            "You are a runner the very moment you put on your trainers. Speed doesn't matter — having fun and moving together does."
+          </div>
+        </article>
+
+        <!-- Coach 3 -->
+        <article class="coach-card">
+          <div class="coach-img-wrap">
+            <img src="assets/portrait_leader.jpg" alt="Coach Jordan Patel" class="coach-img">
+          </div>
+          <span class="coach-badge">EA Athletics Coach</span>
+          <h3 class="coach-name">Jordan Patel</h3>
+          <div class="coach-specialty">Track Intervals &amp; Speedwork Coach</div>
+          <p class="coach-desc">
+            Jordan oversees our seasonal track speed sessions and tempo workouts. He works closely with runners aiming for 5k, 10k, and half marathon personal bests, integrating cadence drills, stride mechanics, and tactical pacing into accessible, high-energy sessions.
+          </p>
+          <div class="coach-quote">
+            "Intervals aren't about punishing yourself; they're about teaching your mind and legs to be confident when the pace picks up."
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ====================================================================
+           SECTION 2: ALL 15 RUN LEADERS
+           ==================================================================== -->
+      <div class="team-section-divider" style="margin-top: 80px;">
+        <span class="section-tag">SESSION LEADERSHIP &amp; TAIL RUNNERS</span>
+        <h2 class="team-section-title">Volunteer Run Leaders (15 Active Leaders)</h2>
+        <p class="team-section-desc">
+          Our friendly, trained LiRF leaders who guide every Thursday social run, Saturday parkrun tour, and Sunday long run.
+        </p>
+      </div>
+
+      <div class="leaders-grid">
+
+        <!-- Leader 1 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_chair.jpg" alt="James Cooper" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">James Cooper</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Co-leads our main Thursday canal routes. Loves sharing Birmingham history while keeping the group together and enthusiastic.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Birmingham &amp; Fazeley Canal</p>
+        </article>
+
+        <!-- Leader 2 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_secretary.jpg" alt="Hannah Wright" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Hannah Wright</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Passionate Walk-to-Run mentor. Specializes in gentle interval timings and making brand-new joiners feel completely at home.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Edgbaston Reservoir Loop</p>
+        </article>
+
+        <!-- Leader 3 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_leader.jpg" alt="Tom Fletcher" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Tom Fletcher</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Our Saturday Parkrun tour coordinator. Helps coordinate car shares and always finds the best spot for post-parkrun coffee.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Cannon Hill Park 5k</p>
+        </article>
+
+        <!-- Leader 4 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_coach.jpg" alt="Rachel Davies" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Rachel Davies</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Sunday Trail enthusiast. Guides member-led weekend half-marathon and marathon prep runs through Birmingham's green parks.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Sutton Park Woods &amp; Lakes</p>
+        </article>
+
+        <!-- Leader 5 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_chair.jpg" alt="Luke Adams" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Luke Adams</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Regular Thursday 7k leader. Renowned for his upbeat playlists, safety debriefs, and hosting lively tables at The Fox afterwards.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Worcester &amp; Birmingham Canal</p>
+        </article>
+
+        <!-- Leader 6 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_secretary.jpg" alt="Priya Sharma" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Priya Sharma</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Our champion tail walker. Dedicated to ensuring that whoever runs, jogs, or walks with Swifts always has cheerful company.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Bath Row &amp; Gay Village Circuit</p>
+        </article>
+
+        <!-- Leader 7 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_leader.jpg" alt="Chris O'Connor" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Chris O'Connor</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Night running &amp; street safety coordinator. Keeps runners illuminated with high-vis gear checks and clear road crossings.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: City Centre Architectural Loop</p>
+        </article>
+
+        <!-- Leader 8 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_coach.jpg" alt="Emily Watson" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Emily Watson</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Couch to 5k co-leader. Brings positive encouragement, dynamic warm-up drills, and celebratory cheers to each beginner cohort.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Harborne Walkway</p>
+        </article>
+
+        <!-- Leader 9 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_chair.jpg" alt="Daniel Miller" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Daniel Miller</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Endurance pacer and route mapper. Helps Swifts members smoothly step up from 5k to 10k and beyond with even pacing.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Bournville &amp; Selly Oak Trails</p>
+        </article>
+
+        <!-- Leader 10 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_secretary.jpg" alt="Zoe Bennett" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Zoe Bennett</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Saturday Parkrun tour ambassador. Greets new runners at weekend events and introduces them to the wider Swifts community.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Perry Hall Parkrun</p>
+        </article>
+
+        <!-- Leader 11 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_leader.jpg" alt="Aaron Patel" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Aaron Patel</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            First aid certified leader. Known for his friendly smile, careful route risk assessments, and steady canal towpath pacing.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Gas Street Basin to University</p>
+        </article>
+
+        <!-- Leader 12 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_coach.jpg" alt="Sophie Hall" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Sophie Hall</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Walk-to-Run leader and member welcome buddy. Always on hand to pair up with nervous first-timers on Thursday evenings.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Sunset Park &amp; Gay Village Green</p>
+        </article>
+
+        <!-- Leader 13 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_chair.jpg" alt="Kieran Murphy" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Kieran Murphy</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Tempo and 10k route leader. Proudly represents Swifts at regional 10k road races and champions LGBTQ+ visibility in athletics.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Lickey Hills Country Park</p>
+        </article>
+
+        <!-- Leader 14 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_secretary.jpg" alt="Natalie Price" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Natalie Price</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Tail runner extraordinaire! Guarantees high-fives, motivational chats, and ensures our regather stops are smooth and fun.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Woodgate Valley Country Park</p>
+        </article>
+
+        <!-- Leader 15 -->
+        <article class="leader-card">
+          <div class="leader-header">
+            <div class="leader-avatar-wrap">
+              <img src="assets/portrait_leader.jpg" alt="Ben Harrison" class="leader-avatar-img">
+            </div>
+            <div>
+              <h3 class="leader-name">Ben Harrison</h3>
+              <span class="leader-badge">LiRF Certified</span>
+            </div>
+          </div>
+          <p class="leader-bio">
+            Marathon and trail adventure leader. Loves plotting Sunday morning scenic circuits across Birmingham's extensive canal network.
+          </p>
+          <p class="leader-favorite">📍 Fav Route: Grand Union Canal Network</p>
+        </article>
+
+      </div>
+
+      <!-- Subpage Call to Action -->
+      <div class="subpage-cta-box" style="margin-top: 56px;">
+        <h3>Run With Our Team This Thursday!</h3>
+        <p>
+          Whether you want to start walking and jogging or train for your next marathon, our coaches and run leaders are here to support you.
+        </p>
+        <button class="btn btn-rainbow open-taster-btn">
+          🏃‍♂️ Book a Free Taster Run
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL DIALOG: BOOK TASTER RUN
+       ========================================================================== -->
+  <div class="modal-overlay" id="taster-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 style="font-size: 1.4rem; margin-bottom: 6px;">🏃‍♂️ Book a Taster Run</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">
+        Join us for a friendly, no-pressure run with Birmingham Swifts. We'll introduce you to your group leader!
+      </p>
+
+      <form id="taster-form">
+        <div class="form-group">
+          <label class="form-label" for="taster-name">Full Name</label>
+          <input type="text" id="taster-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-email">Email Address</label>
+          <input type="email" id="taster-email" class="form-input" placeholder="alex@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-session">Select Session</label>
+          <select id="taster-session" class="form-select">
+            <option value="thursday">Thursday Social Run (Main Club Run, Gay Village, 6:50 PM)</option>
+            <option value="saturday">Saturday Parkrun Meetup (Local 5k, 8:45 AM)</option>
+            <option value="sunday">Sunday Long Run (Half / Marathon / Ultra Training, 9:00 AM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-pace">Running Experience</label>
+          <select id="taster-pace" class="form-select">
+            <option value="beginner">Beginner / Walk-to-Run (Couch to 5k)</option>
+            <option value="casual">Casual / Social Runner</option>
+            <option value="intermediate">Regular 5k–10k Runner</option>
+            <option value="experienced">Long Distance / Experienced Runner</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-rainbow" style="width: 100%; margin-top: 8px;">
+          Confirm Taster Booking ✨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand">
+            <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+            <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          </div>
+          <p class="footer-desc">
+            Birmingham's premier LGBTQ+ and allies running club. Providing a welcoming, safe, and supportive running community for runners of all abilities since 2013.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="runs.html">Weekly Runs</a></li>
+            <li><a href="news.html">Club News</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="coaches-leaders.html">Coaches &amp; Run Leaders</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="join.html">Membership</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Club Sessions</h4>
+          <ul class="footer-links">
+            <li><a href="runs.html#thursday">Thursday Social (Gay Village)</a></li>
+            <li><a href="runs.html#saturday">Saturday Parkrun Tour</a></li>
+            <li><a href="runs.html#sunday">Sunday Long Run</a></li>
+            <li><a href="news.html#c25k">Couch to 5k Program</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Affiliations &amp; Pride</h4>
+          <ul class="footer-links">
+            <li><a href="join.html">England Athletics Affiliated</a></li>
+            <li><a href="about.html">Pride Sports Network</a></li>
+            <li><a href="about.html">Welfare &amp; Safeguarding</a></li>
+            <li><a href="index.html#faqs">FAQ &amp; New Runners</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Birmingham Swifts Running Club. Registered with England Athletics. All rights reserved.</p>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Strava">🏃</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js?v=2.6"></script>
+</body>
+</html>

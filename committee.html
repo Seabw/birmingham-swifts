@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Committee — Birmingham Swifts Running Club</title>
+  <meta name="description" content="Meet the passionate volunteer committee steering Birmingham Swifts Running Club: Chair, Secretary, Race Secretary, Social Secretary, Media Secretary, Welfare Secretary, and Treasurer.">
+  <meta name="keywords" content="Birmingham Swifts committee, running club governance, Chair, Welfare Secretary, Race Secretary, LGBTQ running club Birmingham">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Club Committee — Birmingham Swifts Running Club">
+  <meta property="og:description" content="Meet the dedicated volunteer committee members steering Birmingham Swifts: Chair, Secretary, Race Secretary, Social Secretary, Media Secretary, Welfare Secretary, and Treasurer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero_running_crew.jpg">
+
+  <!-- Favicon / Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/swifts_logo.jpg">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=2.6">
+</head>
+<body>
+
+  <!-- Top Pride Strip -->
+  <div class="pride-strip"></div>
+
+  <!-- Live Announcement Alert Bar -->
+  <aside class="live-alert-bar" id="live-announcement-bar" style="display: none;">
+    <span class="live-alert-icon">📣</span>
+    <span class="live-alert-text" id="live-announcement-text">
+      Welcome to Birmingham Swifts! Join our Thursday flagship social run in the Gay Village.
+    </span>
+    <button class="live-alert-close" id="live-alert-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" id="brand-logo-link">
+        <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          <span class="nav-brand-subtitle">LGBTQ+ & Allies Running Club</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="runs.html" class="nav-link">Weekly Runs</a></li>
+        <li><a href="news.html" class="nav-link">Club News</a></li>
+        <li><a href="committee.html" class="nav-link active">Committee</a></li>
+        <li><a href="coaches-leaders.html" class="nav-link">Coaches &amp; Run Leaders</a></li>
+        <li><a href="members.html" class="nav-link">Members</a></li>
+        <li><a href="join.html" class="nav-link">Join Us</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li class="mobile-only-action">
+          <button class="btn btn-primary open-taster-btn mobile-menu-cta">🏃‍♂️ Book a Taster Run</button>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          🌙
+        </button>
+        <button class="btn btn-primary" id="open-taster-modal-btn">
+          🏃‍♂️ Book a Taster Run
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="Open mobile menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SUBPAGE HERO
+       ========================================================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <div class="subpage-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <span>Committee</span>
+      </div>
+      <h1 class="subpage-hero-title">Club Committee</h1>
+      <p class="subpage-hero-desc">
+        The passionate team of democratically elected volunteers guiding the Birmingham Swifts, ensuring our community remains safe, supportive, and vibrant.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: COMMITTEE MEMBERS
+       ========================================================================== -->
+  <main class="subpage-content">
+    <div class="container">
+
+      <!-- Committee Overview Narrative Card -->
+      <article class="about-narrative-card">
+        <h3>Dedicated Volunteers Powering the Swifts</h3>
+        <p>
+          The Birmingham Swifts are steered entirely by a dedicated committee of volunteers elected each year at our Annual General Meeting (AGM). From coordinating weekly venues and England Athletics race entries to managing finances, welfare safeguarding, and our famous post-run socials, the committee works tirelessly behind the scenes to keep our running club thriving, open, and free from barriers.
+        </p>
+        <p style="margin-bottom: 0;">
+          We believe in transparent, collaborative leadership that listens to our members. Below, meet the officers currently serving on the Birmingham Swifts Executive Committee.
+        </p>
+      </article>
+
+      <!-- The 7 Committee Roles Grid -->
+      <div class="committee-grid">
+
+        <!-- 1. Chair -->
+        <article class="committee-card">
+          <div class="committee-header">
+            <div class="committee-avatar-wrap">
+              <img src="assets/portrait_chair.jpg" alt="Chair Portrait" class="committee-avatar-img">
+            </div>
+            <div>
+              <span class="committee-role-badge">Executive Role</span>
+              <h3 class="committee-name">Chair</h3>
+            </div>
+          </div>
+          <p class="committee-desc">
+            Leads the overall strategic direction of Birmingham Swifts, chairs executive committee meetings and our AGM, oversees constitutional governance, and acts as the official ambassador connecting the club with England Athletics and national LGBTQ+ athletic networks.
+          </p>
+          <ul class="committee-responsibilities">
+            <li>Club strategic vision &amp; constitutional governance</li>
+            <li>Chairing committee meetings &amp; the Annual General Meeting</li>
+            <li>Official liaison with England Athletics &amp; community partners</li>
+          </ul>
+        </article>
+
+        <!-- 2. Secretary -->
+        <article class="committee-card">
+          <div class="committee-header">
+            <div class="committee-avatar-wrap">
+              <img src="assets/portrait_secretary.jpg" alt="Secretary Portrait" class="committee-avatar-img">
+            </div>
+            <div>
+              <span class="committee-role-badge">Executive Role</span>
+              <h3 class="committee-name">Secretary</h3>
+            </div>
+          </div>
+          <p class="committee-desc">
+            The operational core of the club, maintaining administrative excellence across all club channels. Manages meeting agendas, publishes official minutes, oversees venue permits, handles official correspondence, and ensures documentation compliance.
+          </p>
+          <ul class="committee-responsibilities">
+            <li>Meeting minutes &amp; administrative correspondence</li>
+            <li>Club governance records &amp; venue booking coordination</li>
+            <li>Member notices &amp; annual affiliation compliance</li>
+          </ul>
+        </article>
+
+        <!-- 3. Race Secretary -->
+        <article class="committee-card">
+          <div class="committee-header">
+            <div class="committee-avatar-wrap">
+              <img src="assets/portrait_coach.jpg" alt="Race Secretary Portrait" class="committee-avatar-img">
+            </div>
+            <div>
+              <span class="committee-role-badge">Racing &amp; Competition</span>
+              <h3 class="committee-name">Race Secretary</h3>
+            </div>
+          </div>
+          <p class="committee-desc">
+            Connects Swifts runners with the wider athletics landscape! Coordinates club entries for local 10k, half marathon, and cross-country fixtures, organizes the annual London Marathon club ballot allocation, and maintains club records and PB leaderboards.
+          </p>
+          <ul class="committee-responsibilities">
+            <li>Race calendar planning &amp; team entries</li>
+            <li>England Athletics London Marathon ballot administration</li>
+            <li>Club race achievements &amp; PB tracking</li>
+          </ul>
+        </article>
+
+        <!-- 4. Social Secretary -->
+        <article class="committee-card">
+          <div class="committee-header">
+            <div class="committee-avatar-wrap">
+              <img src="assets/portrait_leader.jpg" alt="Social Secretary Portrait" class="committee-avatar-img">
+            </div>
+            <div>
+              <span class="committee-role-badge">Community &amp; Social</span>
+              <h3 class="committee-name">Social Secretary</h3>
+            </div>
+          </div>
+          <p class="committee-desc">
+            Curates the fun, social spirit that makes Swifts special beyond running! Organizes our weekly Thursday post-run socials at The Fox, Birmingham Pride parade celebrations, summer picnics, festive dinners, and the annual Club Celebration Awards.
+          </p>
+          <ul class="committee-responsibilities">
+            <li>Thursday post-run socials at The Fox</li>
+            <li>Birmingham Pride parade &amp; community events</li>
+            <li>Annual Club Awards Banquet &amp; celebration socials</li>
+          </ul>
+        </article>
+
+        <!-- 5. Media Secretary -->
+        <article class="committee-card">
+          <div class="committee-header">
+            <div class="committee-avatar-wrap">
+              <img src="assets/portrait_secretary.jpg" alt="Media Secretary Portrait" class="committee-avatar-img">
+            </div>
+            <div>
+              <span class="committee-role-badge">Communications</span>
+              <h3 class="committee-name">Media Secretary</h3>
+            </div>
+          </div>
+          <p class="committee-desc">
+            Champions the vibrant public voice of the Birmingham Swifts. Oversees our Instagram, Facebook, and website updates, captures photography during club runs and race days, and produces our member updates and press releases.
+          </p>
+          <ul class="committee-responsibilities">
+            <li>Social media storytelling &amp; photo galleries</li>
+            <li>Website announcements &amp; club news bulletins</li>
+            <li>Press liaison &amp; LGBTQ+ athletics outreach</li>
+          </ul>
+        </article>
+
+        <!-- 6. Welfare Secretary -->
+        <article class="committee-card">
+          <div class="committee-header">
+            <div class="committee-avatar-wrap">
+              <img src="assets/portrait_coach.jpg" alt="Welfare Secretary Portrait" class="committee-avatar-img">
+            </div>
+            <div>
+              <span class="committee-role-badge" style="background: rgba(236,72,153,0.15); color: #f472b6; border-color: rgba(236,72,153,0.3);">Safety &amp; Inclusion</span>
+              <h3 class="committee-name">Welfare Secretary</h3>
+            </div>
+          </div>
+          <p class="committee-desc">
+            Dedicated to ensuring every runner feels physically safe, respected, and valued. Maintains our safeguarding and zero-tolerance discrimination policies, acts as an independent, confidential listener, and coordinates mental wellness initiatives.
+          </p>
+          <ul class="committee-responsibilities">
+            <li>Confidential listening &amp; member support</li>
+            <li>Safeguarding, anti-harassment &amp; zero-tolerance policies</li>
+            <li>Inclusive participation &amp; mental wellness advocacy</li>
+          </ul>
+        </article>
+
+        <!-- 7. Treasurer -->
+        <article class="committee-card">
+          <div class="committee-header">
+            <div class="committee-avatar-wrap">
+              <img src="assets/portrait_chair.jpg" alt="Treasurer Portrait" class="committee-avatar-img">
+            </div>
+            <div>
+              <span class="committee-role-badge">Finance &amp; Budget</span>
+              <h3 class="committee-name">Treasurer</h3>
+            </div>
+          </div>
+          <p class="committee-desc">
+            Manages the financial health and sustainability of Birmingham Swifts with complete transparency. Oversees membership funds, subsidizes club running kit, manages England Athletics affiliation dues, and finances run leader training courses.
+          </p>
+          <ul class="committee-responsibilities">
+            <li>Financial accounting &amp; transparent annual audits</li>
+            <li>Membership subscriptions &amp; kit subsidy funding</li>
+            <li>Budget allocation for run leader &amp; coach qualifications</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- Subpage Call to Action -->
+      <div class="subpage-cta-box" style="margin-top: 56px;">
+        <h3>Want to Get Involved or Have Feedback?</h3>
+        <p>
+          Our committee members are always approachable at Thursday runs or via email. Every member is welcome to attend our AGM, put forward ideas, or stand for an open role!
+        </p>
+        <button class="btn btn-rainbow open-taster-btn">
+          🏃‍♂️ Connect with the Club
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL DIALOG: BOOK TASTER RUN
+       ========================================================================== -->
+  <div class="modal-overlay" id="taster-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 style="font-size: 1.4rem; margin-bottom: 6px;">🏃‍♂️ Book a Taster Run</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">
+        Join us for a friendly, no-pressure run with Birmingham Swifts. We'll introduce you to your group leader!
+      </p>
+
+      <form id="taster-form">
+        <div class="form-group">
+          <label class="form-label" for="taster-name">Full Name</label>
+          <input type="text" id="taster-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-email">Email Address</label>
+          <input type="email" id="taster-email" class="form-input" placeholder="alex@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-session">Select Session</label>
+          <select id="taster-session" class="form-select">
+            <option value="thursday">Thursday Social Run (Main Club Run, Gay Village, 6:50 PM)</option>
+            <option value="saturday">Saturday Parkrun Meetup (Local 5k, 8:45 AM)</option>
+            <option value="sunday">Sunday Long Run (Half / Marathon / Ultra Training, 9:00 AM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-pace">Running Experience</label>
+          <select id="taster-pace" class="form-select">
+            <option value="beginner">Beginner / Walk-to-Run (Couch to 5k)</option>
+            <option value="casual">Casual / Social Runner</option>
+            <option value="intermediate">Regular 5k–10k Runner</option>
+            <option value="experienced">Long Distance / Experienced Runner</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-rainbow" style="width: 100%; margin-top: 8px;">
+          Confirm Taster Booking ✨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand">
+            <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+            <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          </div>
+          <p class="footer-desc">
+            Birmingham's premier LGBTQ+ and allies running club. Providing a welcoming, safe, and supportive running community for runners of all abilities since 2013.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="runs.html">Weekly Runs</a></li>
+            <li><a href="news.html">Club News</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="coaches-leaders.html">Coaches &amp; Run Leaders</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="join.html">Membership</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Club Sessions</h4>
+          <ul class="footer-links">
+            <li><a href="runs.html#thursday">Thursday Social (Gay Village)</a></li>
+            <li><a href="runs.html#saturday">Saturday Parkrun Tour</a></li>
+            <li><a href="runs.html#sunday">Sunday Long Run</a></li>
+            <li><a href="news.html#c25k">Couch to 5k Program</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Affiliations &amp; Pride</h4>
+          <ul class="footer-links">
+            <li><a href="join.html">England Athletics Affiliated</a></li>
+            <li><a href="about.html">Pride Sports Network</a></li>
+            <li><a href="about.html">Welfare &amp; Safeguarding</a></li>
+            <li><a href="index.html#faqs">FAQ &amp; New Runners</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Birmingham Swifts Running Club. Registered with England Athletics. All rights reserved.</p>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Strava">🏃</a>
+          <a href="#" aria-label="Email">✉️</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-notification" id="toast"></div>
+
+  <!-- Main JavaScript -->
+  <script src="script.js?v=2.6"></script>
+</body>
+</html>

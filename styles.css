@@ -2041,6 +2041,357 @@ body.has-alert .hero-section {
   }
 }
 
+/* ==========================================================================
+   COMMITTEE, COACHES & RUN LEADERS STYLES
+   ========================================================================== */
+
+.team-section-divider {
+  margin: 64px 0 32px;
+  text-align: center;
+}
+
+.team-section-title {
+  font-size: 1.85rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.team-section-desc {
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* Committee Cards Grid */
+.committee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.committee-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.committee-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--rainbow-grad);
+  opacity: 0.8;
+}
+
+.committee-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.committee-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.committee-avatar-wrap {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 12px var(--swifts-blue-glow);
+}
+
+.committee-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.committee-role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  margin-bottom: 6px;
+}
+
+.committee-name {
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.committee-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.committee-responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+}
+
+.committee-responsibilities li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.committee-responsibilities li::before {
+  content: '✓';
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* Coaches Grid */
+.coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.coach-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.coach-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #38bdf8);
+}
+
+.coach-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(236, 72, 153, 0.4);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+}
+
+.coach-img-wrap {
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 18px;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
+
+.coach-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.coach-card:hover .coach-img {
+  transform: scale(1.03);
+}
+
+.coach-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.35);
+  margin-bottom: 8px;
+}
+
+.coach-name {
+  font-size: 1.35rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.coach-specialty {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 14px;
+}
+
+.coach-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.coach-quote {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #ec4899;
+  padding: 10px 14px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: auto;
+}
+
+/* Run Leaders Grid */
+.leaders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.leader-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.leader-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.leader-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.leader-avatar-wrap {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #8b5cf6;
+  background: var(--surface-alt);
+}
+
+.leader-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.leader-name {
+  font-size: 1.12rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 3px 0;
+}
+
+.leader-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(139, 92, 246, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.leader-bio {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.leader-favorite {
+  font-size: 0.82rem;
+  color: #38bdf8;
+  font-weight: 500;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Light Theme Adjustments */
+[data-theme="light"] .committee-card,
+[data-theme="light"] .coach-card,
+[data-theme="light"] .leader-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .committee-card:hover,
+[data-theme="light"] .coach-card:hover,
+[data-theme="light"] .leader-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .coach-quote {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 992px) {
+  .coaches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .run-nav-sub-row {
     grid-template-columns: 1fr;
@@ -2060,4 +2411,14 @@ body.has-alert .hero-section {
   .subpage-cta-box {
     padding: 28px 20px;
   }
+  .coaches-grid {
+    grid-template-columns: 1fr;
+  }
+  .committee-grid {
+    grid-template-columns: 1fr;
+  }
+  .leaders-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
