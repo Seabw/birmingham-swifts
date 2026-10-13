@@ -259,26 +259,43 @@ function initTasterModal() {
 function initSmoothScroll() {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id], header[id]');
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPos = window.pageYOffset + 120;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      if (scrollPos >= top && scrollPos < top + height) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
+  // Mark active link based on current page HTML file
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href') || '';
+    if (href === currentPath || (currentPath === 'index.html' && (href === '#hero' || href === 'index.html'))) {
+      link.classList.add('active');
+    }
   });
+
+  // Only run in-page section spy on pages with multiple hash sections
+  if (currentPath === 'index.html' || currentPath === '' || currentPath === '/') {
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const scrollPos = window.pageYOffset + 120;
+
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      if (current) {
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href') || '';
+          if (href.startsWith('#')) {
+            link.classList.remove('active');
+            if (href === `#${current}`) {
+              link.classList.add('active');
+            }
+          }
+        });
+      }
+    });
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -430,9 +447,13 @@ function applyGeneralSettings(rows) {
     const el = document.getElementById('hero-stat-runs');
     if (el) el.textContent = settings.stat_weekly_runs;
   }
-  if (settings.stat_pace_groups) {
-    const el = document.getElementById('hero-stat-paces');
-    if (el) el.textContent = settings.stat_pace_groups;
+  if (settings.stat_run_leaders || settings.stat_leaders) {
+    const el = document.getElementById('hero-stat-leaders');
+    if (el) el.textContent = settings.stat_run_leaders || settings.stat_leaders;
+  }
+  if (settings.stat_coaches || settings.stat_ea_coaches) {
+    const el = document.getElementById('hero-stat-coaches');
+    if (el) el.textContent = settings.stat_coaches || settings.stat_ea_coaches;
   }
   if (settings.hero_title) {
     const el = document.getElementById('hero-title');

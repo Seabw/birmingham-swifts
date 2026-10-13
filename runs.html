@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Runs — Birmingham Swifts Running Club</title>
+  <meta name="description" content="Explore our weekly Birmingham Swifts running schedule: Thursday evening flagship canal run in the Gay Village, Saturday 5k parkrun tours, and Sunday marathon long runs.">
+  <meta name="keywords" content="Birmingham Swifts weekly runs, Thursday social run Birmingham, gay running club timetable, parkrun Birmingham Swifts, marathon training Birmingham">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Weekly Runs — Birmingham Swifts Running Club">
+  <meta property="og:description" content="Join our 3 weekly runs catering to all distances and paces. Complete beginners to marathoners, with 5 pace groups and tail walkers.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero_running_crew.jpg">
+
+  <!-- Favicon / Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/swifts_logo.jpg">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=2.5">
+</head>
+<body>
+
+  <!-- Top Pride Strip -->
+  <div class="pride-strip"></div>
+
+  <!-- Live Announcement Alert Bar -->
+  <aside class="live-alert-bar" id="live-announcement-bar" style="display: none;">
+    <span class="live-alert-icon">📣</span>
+    <span class="live-alert-text" id="live-announcement-text">
+      Welcome to Birmingham Swifts! Join our Thursday flagship social run in the Gay Village.
+    </span>
+    <button class="live-alert-close" id="live-alert-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" id="brand-logo-link">
+        <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          <span class="nav-brand-subtitle">LGBTQ+ & Allies Running Club</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="runs.html" class="nav-link active">Weekly Runs</a></li>
+        <li><a href="news.html" class="nav-link">Club News</a></li>
+        <li><a href="members.html" class="nav-link">Members</a></li>
+        <li><a href="join.html" class="nav-link">Join Us</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li class="mobile-only-action">
+          <button class="btn btn-primary open-taster-btn mobile-menu-cta">🏃‍♂️ Book a Taster Run</button>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          🌙
+        </button>
+        <button class="btn btn-primary" id="open-taster-modal-btn">
+          🏃‍♂️ Book a Taster Run
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="Open mobile menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SUBPAGE HERO
+       ========================================================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <div class="subpage-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <span>Weekly Runs</span>
+      </div>
+      <h1 class="subpage-hero-title">Weekly Runs &amp; Sessions</h1>
+      <p class="subpage-hero-desc">
+        We organize three regular weekly sessions across Birmingham. Every pace is supported by trained run leaders and tail walkers with zero fees.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: TIMETABLE & RUN DETAILS
+       ========================================================================== -->
+  <main class="subpage-content">
+    <div class="container">
+
+      <!-- Schedule Filter Bar -->
+      <div class="schedule-filter-bar" id="schedule-filters">
+        <button class="filter-btn active" data-day="all">All Runs</button>
+        <button class="filter-btn" data-day="thursday">Thursday Social (Main Run)</button>
+        <button class="filter-btn" data-day="saturday">Saturday Parkrun (Unofficial)</button>
+        <button class="filter-btn" data-day="sunday">Sunday Long Run (Unofficial)</button>
+      </div>
+
+      <!-- Detailed Run Cards Grid -->
+      <div class="runs-grid" id="runs-container">
+        
+        <!-- Thursday Club Social (Main Run) -->
+        <article class="run-card" id="thursday" data-day="thursday">
+          <div class="run-card-header">
+            <span class="run-day-badge official">Thursday Evening • Main Run</span>
+            <span class="run-time">⏰ 6:50 PM Meet (7:00 PM Start)</span>
+          </div>
+          <h3 class="run-title">Main Club Social Run (5k / 7k / 10k &amp; Walk-to-Run)</h3>
+          <div class="run-location">
+            📍 <span>Pagoda Island, Bath Row / Gay Village, Birmingham</span>
+          </div>
+          <p class="run-description">
+            Our official flagship weekly club session along Birmingham's canal towpaths and illuminated street routes. Features 5 distinct pace groups plus a dedicated Starting Out / Walk-to-Run group. Bag drop and restrooms available before departure, followed by social drinks at The Fox!
+          </p>
+          <div class="run-paces-list">
+            <span class="pace-pill">Walk-to-Run (Starting Out)</span>
+            <span class="pace-pill">Group 4: 7:00-8:00 /km</span>
+            <span class="pace-pill">Group 3: 6:00-7:00 /km</span>
+            <span class="pace-pill">Group 2: 5:00-6:00 /km</span>
+            <span class="pace-pill">Group 1: &lt; 5:00 /km</span>
+          </div>
+          <button class="btn btn-primary run-select-btn" data-run="Thursday Main Club Social">
+            Book Thursday Taster
+          </button>
+        </article>
+
+        <!-- Saturday Parkrun Tour (Unofficial) -->
+        <article class="run-card" id="saturday" data-day="saturday">
+          <div class="run-card-header">
+            <span class="run-day-badge unofficial">Saturday Morning • Unofficial</span>
+            <span class="run-time">⏰ 8:45 AM Meet (9:00 AM Start)</span>
+          </div>
+          <h3 class="run-title">Swifts Parkrun Tour &amp; Social Coffee</h3>
+          <div class="run-location">
+            📍 <span>Cannon Hill, Edgbaston Reservoir, Perry Hall, Babbs Mill &amp; Woodgate Valley</span>
+          </div>
+          <p class="run-description">
+            Weekly informal club meet-ups at local Birmingham 5k parkrun events. Swifts wear their club vests, run or walk at their own preferred pace, and regather afterwards for coffee, breakfast pastries, and weekend catch-ups.
+          </p>
+          <div class="run-paces-list">
+            <span class="pace-pill">5k Free Community Run</span>
+            <span class="pace-pill">Local Parkruns Across Birmingham</span>
+            <span class="pace-pill">All Paces Welcome</span>
+            <span class="pace-pill">Post-Run Coffee &amp; Chat</span>
+          </div>
+          <button class="btn btn-secondary run-select-btn" data-run="Saturday Parkrun Tour">
+            Join Saturday Parkrun
+          </button>
+        </article>
+
+        <!-- Sunday Long Run (Unofficial) -->
+        <article class="run-card" id="sunday" data-day="sunday">
+          <div class="run-card-header">
+            <span class="run-day-badge unofficial">Sunday Morning • Unofficial</span>
+            <span class="run-time">⏰ 9:00 AM / 9:30 AM Meet</span>
+          </div>
+          <h3 class="run-title">Sunday Long Run (Half, Marathon &amp; Ultra Training)</h3>
+          <div class="run-location">
+            📍 <span>Sutton Park, Lickey Hills, Canal Towpaths &amp; Off-Road Trails</span>
+          </div>
+          <p class="run-description">
+            Unofficial endurance runs organized by members training for autumn and spring half marathons, full marathons (London, Manchester, Chicago, Berlin), or ultra-distance trail races (10k to 30k+). Steady conversational pacing with frequent regather checkpoints.
+          </p>
+          <div class="run-paces-list">
+            <span class="pace-pill">10k – 30k+ Distance</span>
+            <span class="pace-pill">Half &amp; Full Marathon Prep</span>
+            <span class="pace-pill">Ultra Distance Trails</span>
+            <span class="pace-pill">Regroup Checkpoints</span>
+          </div>
+          <button class="btn btn-secondary run-select-btn" data-run="Sunday Long Run">
+            Join Sunday Long Run
+          </button>
+        </article>
+      </div>
+
+      <!-- Interactive Pace Matcher Widget -->
+      <div class="pace-matcher-box" style="margin-top: 48px;">
+        <h3 style="font-size: 1.45rem; margin-bottom: 8px;">🤔 Unsure which group fits your pace?</h3>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+          Click your typical 5k time or running pace below, and we'll match you to your ideal Swifts group!
+        </p>
+
+        <div class="matcher-options" id="matcher-options">
+          <button class="matcher-btn" data-pace="walk">Beginner / Walk-Run</button>
+          <button class="matcher-btn" data-pace="slow">35–40+ min (7:00-8:00 /km)</button>
+          <button class="matcher-btn selected" data-pace="mid">28–34 min (6:00-6:45 /km)</button>
+          <button class="matcher-btn" data-pace="fast">24–27 min (5:00-5:45 /km)</button>
+          <button class="matcher-btn" data-pace="speed">Sub 23 min (&lt; 4:45 /km)</button>
+        </div>
+
+        <div class="matcher-result" id="matcher-result">
+          🎯 <strong>Recommended: Group 3 (6:00 – 6:45 min/km)</strong><br>
+          <span style="font-size: 0.9rem; font-weight: normal; color: var(--text-secondary);">
+            A friendly, conversational pace covering ~6-7 km on Thursday nights with tail walkers. Perfect for building stamina!
+          </span>
+        </div>
+      </div>
+
+      <!-- What to Expect / First Timer FAQ Card -->
+      <article class="about-narrative-card" style="margin-top: 48px;">
+        <h3>What to Expect at Your First Thursday Run</h3>
+        <p>
+          <strong>Arrival &amp; Briefing:</strong> We gather from 6:50 PM at Pagoda Island on Bath Row. Look out for the bright Swifts running vests and friendly run leaders. At 7:00 PM sharp, we do announcements and group introductions before heading off.
+        </p>
+        <p>
+          <strong>Bag Drop &amp; Facilities:</strong> You can securely leave coats and bags at our meet partner venue in the Gay Village before we start, and restrooms are available.
+        </p>
+        <p>
+          <strong>What to Wear:</strong> Comfortable trainers and running kit. During autumn and winter months, high-visibility clothing and a small running headtorch or chest light are strongly recommended.
+        </p>
+        <p>
+          <strong>The Social:</strong> After each run, everyone is invited to join us for a drink (alcoholic or soft) and a chat at <strong>The Fox</strong>. It's the best way to get to know your fellow runners!
+        </p>
+      </article>
+
+      <!-- Subpage Call to Action -->
+      <div class="subpage-cta-box">
+        <h3>Join Us This Thursday!</h3>
+        <p>
+          Let us know you're coming so our run leaders can greet you, answer any questions, and pair you with the best pace group.
+        </p>
+        <button class="btn btn-rainbow open-taster-btn">
+          🏃‍♂️ Book a Taster Run
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL DIALOG: BOOK TASTER RUN
+       ========================================================================== -->
+  <div class="modal-overlay" id="taster-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 style="font-size: 1.4rem; margin-bottom: 6px;">🏃‍♂️ Book a Taster Run</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">
+        Join us for a friendly, no-pressure run with Birmingham Swifts. We'll introduce you to your group leader!
+      </p>
+
+      <form id="taster-form">
+        <div class="form-group">
+          <label class="form-label" for="taster-name">Full Name</label>
+          <input type="text" id="taster-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-email">Email Address</label>
+          <input type="email" id="taster-email" class="form-input" placeholder="alex@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-session">Select Session</label>
+          <select id="taster-session" class="form-select">
+            <option value="thursday">Thursday Social Run (Main Club Run, Gay Village, 6:50 PM)</option>
+            <option value="saturday">Saturday Parkrun Meetup (Local 5k, 8:45 AM)</option>
+            <option value="sunday">Sunday Long Run (Half / Marathon / Ultra Training, 9:00 AM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-pace">Approximate Pace / Experience</label>
+          <select id="taster-pace" class="form-select">
+            <option value="beginner">Beginner / Walk-to-Run (Couch to 5k)</option>
+            <option value="easy">Casual 5k (35-40 min / 7:00-8:00 min/km)</option>
+            <option value="steady">Steady 5k (28-34 min / 6:00-6:45 min/km)</option>
+            <option value="brisk">Brisk 5k (24-27 min / 5:00-5:45 min/km)</option>
+            <option value="fast">Fast 5k (&lt; 23 min / &lt; 4:45 min/km)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-rainbow" style="width: 100%; margin-top: 8px;">
+          Confirm Taster Booking ✨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand">
+            <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+            <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          </div>
+          <p class="footer-brand-p">
+            Birmingham's inclusive LGBTQ+ &amp; allies running club. England Athletics affiliated. Run with pride, make lifelong friends, and achieve your personal goals.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.strava.com/clubs/birmingham-swifts" target="_blank" rel="noopener" class="social-icon-btn" title="Strava Club">🏃</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" title="Instagram">📸</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" title="Facebook">📘</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" title="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="runs.html">Weekly Runs</a></li>
+            <li><a href="news.html">Club News &amp; C25K</a></li>
+            <li><a href="members.html">Community Voices</a></li>
+            <li><a href="join.html">Membership &amp; Affiliation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Locations</h4>
+          <ul class="footer-links-list">
+            <li><a href="runs.html#thursday">Pagoda Island &amp; Gay Village (Thursdays)</a></li>
+            <li><a href="runs.html#saturday">Cannon Hill &amp; Local Parkruns (Saturdays)</a></li>
+            <li><a href="runs.html#sunday">Sutton Park &amp; Canal Trails (Sundays)</a></li>
+            <li><a href="about.html">The Fox Bar (Post-Run Socials)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact &amp; Welfare</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:info@birmingham-swifts.co.uk">info@birmingham-swifts.co.uk</a></li>
+            <li><a href="index.html#faqs">Safeguarding &amp; Welfare</a></li>
+            <li><a href="index.html#faqs">Code of Conduct</a></li>
+            <li><a href="join.html">England Athletics Affiliation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Birmingham Swifts Running Club. Proudly inclusive. All rights reserved. 🏳️‍🌈</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js?v=2.5"></script>
+</body>
+</html>

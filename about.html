@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Birmingham Swifts Running Club</title>
+  <meta name="description" content="Discover Birmingham Swifts: Birmingham's friendly, England Athletics affiliated LGBTQ+ and allies running club. Learn about our values, our run leaders, and our 100% inclusive community.">
+  <meta name="keywords" content="About Birmingham Swifts, LGBTQ+ running club Birmingham, gay running club, inclusive running club Birmingham, England Athletics">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="About Us — Birmingham Swifts Running Club">
+  <meta property="og:description" content="A safe, welcoming, and social community for every runner. England Athletics affiliated with qualified run leaders and zero elitism.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero_running_crew.jpg">
+
+  <!-- Favicon / Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/swifts_logo.jpg">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=2.5">
+</head>
+<body>
+
+  <!-- Top Pride Strip -->
+  <div class="pride-strip"></div>
+
+  <!-- Live Announcement Alert Bar -->
+  <aside class="live-alert-bar" id="live-announcement-bar" style="display: none;">
+    <span class="live-alert-icon">📣</span>
+    <span class="live-alert-text" id="live-announcement-text">
+      Welcome to Birmingham Swifts! Join our Thursday flagship social run in the Gay Village.
+    </span>
+    <button class="live-alert-close" id="live-alert-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" id="brand-logo-link">
+        <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          <span class="nav-brand-subtitle">LGBTQ+ & Allies Running Club</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="about.html" class="nav-link active">About Us</a></li>
+        <li><a href="runs.html" class="nav-link">Weekly Runs</a></li>
+        <li><a href="news.html" class="nav-link">Club News</a></li>
+        <li><a href="members.html" class="nav-link">Members</a></li>
+        <li><a href="join.html" class="nav-link">Join Us</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li class="mobile-only-action">
+          <button class="btn btn-primary open-taster-btn mobile-menu-cta">🏃‍♂️ Book a Taster Run</button>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          🌙
+        </button>
+        <button class="btn btn-primary" id="open-taster-modal-btn">
+          🏃‍♂️ Book a Taster Run
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="Open mobile menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SUBPAGE HERO
+       ========================================================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <div class="subpage-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <span>About Us</span>
+      </div>
+      <h1 class="subpage-hero-title">Who We Are</h1>
+      <p class="subpage-hero-desc">
+        A welcoming, vibrant community for every runner. We run with pride, support each other at every stride, and ensure nobody is ever left behind.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: NARRATIVE & CORE INCLUSIVITY VALUES
+       ========================================================================== -->
+  <main class="subpage-content">
+    <div class="container">
+      
+      <!-- Narrative / Club History Card -->
+      <article class="about-narrative-card">
+        <h3>Our Story &amp; Philosophy</h3>
+        <p>
+          Founded in Birmingham, the <strong>Birmingham Swifts</strong> were created to provide a genuinely inclusive, safe, and supportive space where LGBTQ+ people and supportive allies can meet, stay active, and make lasting friendships.
+        </p>
+        <p>
+          We believe that running belongs to everyone. Whether you have never run a single step in your life, are working through our beginner Couch to 5k program, or are logging 50-mile ultra-marathons across the British hills, you are valued, respected, and welcomed here.
+        </p>
+        <p>
+          As an <strong>England Athletics affiliated club</strong>, we combine professional coaching standards and trained run leadership with an informal, friendly, non-elitist club culture. We meet in the heart of Birmingham at Pagoda Island in the Gay Village every Thursday night, followed by social drinks at The Fox, with unofficial parkruns and weekend trail runs throughout the year.
+        </p>
+      </article>
+
+      <!-- The 3 Core Inclusivity Sections Moved from Main Page -->
+      <div class="section-header" style="margin-bottom: 32px;">
+        <span class="section-tag">OUR CORE VALUES</span>
+        <h2 class="section-title">The Three Pillars of Swifts Running</h2>
+        <p class="section-subtitle">
+          Everything we do is guided by warmth, community safety, and celebratory support.
+        </p>
+      </div>
+
+      <div class="about-values-grid">
+        <div class="initiative-card">
+          <div class="initiative-body">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">🏳️‍🌈</div>
+            <h3 class="initiative-title">100% Inclusive Environment</h3>
+            <p class="initiative-text">
+              Regardless of your sexual orientation, gender identity, background, or running pace, you will always find a warm welcome and genuine camaraderie. We proudly march in Pride, champion diversity in athletics, and foster an environment where you can truly be yourself.
+            </p>
+          </div>
+        </div>
+
+        <div class="initiative-card">
+          <div class="initiative-body">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">🛡️</div>
+            <h3 class="initiative-title">No Runner Left Behind</h3>
+            <p class="initiative-text">
+              Every group session features designated Run Leaders and friendly Tail Walkers / Tail Runners. We run at conversational paces, loop back to support each other, and regather at checkpoints. You will never have to worry about holding anyone back or running alone.
+            </p>
+          </div>
+        </div>
+
+        <div class="initiative-card">
+          <div class="initiative-body">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">🍻</div>
+            <h3 class="initiative-title">Running &amp; Social Balance</h3>
+            <p class="initiative-text">
+              Running is only half the fun! We host regular post-run drinks in Birmingham's Gay Village, weekend brunch runs after parkruns, pride parade squads, festive Christmas socials, and weekend away race trips. The friendships you build off the trail last a lifetime.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leadership, Welfare & Coaches -->
+      <article class="about-narrative-card">
+        <h3>Certified Coaching &amp; Dedicated Welfare</h3>
+        <p>
+          The club is supported by <strong>15+ licensed England Athletics Run Leaders</strong> and <strong>3+ EA Qualified Coaches</strong> who plan safe, illuminated canal and street routes, design structured interval training, and coach complete beginners through Couch to 5k.
+        </p>
+        <p>
+          Your physical and emotional safety is our highest priority. We maintain a proactive Welfare &amp; Safeguarding team that ensures our club remains an open, non-discriminatory, and zero-tolerance harassment space for all members.
+        </p>
+      </article>
+
+      <!-- Subpage Call to Action -->
+      <div class="subpage-cta-box">
+        <h3>Ready to Experience Swifts?</h3>
+        <p>
+          Come along to our Thursday social run or Saturday parkrun meetup. No commitment, no fees — just great company and friendly running!
+        </p>
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-rainbow open-taster-btn">
+            ✨ Book a Free Taster Run
+          </button>
+          <a href="runs.html" class="btn btn-secondary">
+            📅 View Weekly Runs Schedule
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL DIALOG: BOOK TASTER RUN
+       ========================================================================== -->
+  <div class="modal-overlay" id="taster-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 style="font-size: 1.4rem; margin-bottom: 6px;">🏃‍♂️ Book a Taster Run</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">
+        Join us for a friendly, no-pressure run with Birmingham Swifts. We'll introduce you to your group leader!
+      </p>
+
+      <form id="taster-form">
+        <div class="form-group">
+          <label class="form-label" for="taster-name">Full Name</label>
+          <input type="text" id="taster-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-email">Email Address</label>
+          <input type="email" id="taster-email" class="form-input" placeholder="alex@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-session">Select Session</label>
+          <select id="taster-session" class="form-select">
+            <option value="thursday">Thursday Social Run (Main Club Run, Gay Village, 6:50 PM)</option>
+            <option value="saturday">Saturday Parkrun Meetup (Local 5k, 8:45 AM)</option>
+            <option value="sunday">Sunday Long Run (Half / Marathon / Ultra Training, 9:00 AM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-pace">Approximate Pace / Experience</label>
+          <select id="taster-pace" class="form-select">
+            <option value="beginner">Beginner / Walk-to-Run (Couch to 5k)</option>
+            <option value="easy">Casual 5k (35-40 min / 7:00-8:00 min/km)</option>
+            <option value="steady">Steady 5k (28-34 min / 6:00-6:45 min/km)</option>
+            <option value="brisk">Brisk 5k (24-27 min / 5:00-5:45 min/km)</option>
+            <option value="fast">Fast 5k (&lt; 23 min / &lt; 4:45 min/km)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-rainbow" style="width: 100%; margin-top: 8px;">
+          Confirm Taster Booking ✨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand">
+            <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+            <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          </div>
+          <p class="footer-brand-p">
+            Birmingham's inclusive LGBTQ+ &amp; allies running club. England Athletics affiliated. Run with pride, make lifelong friends, and achieve your personal goals.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.strava.com/clubs/birmingham-swifts" target="_blank" rel="noopener" class="social-icon-btn" title="Strava Club">🏃</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" title="Instagram">📸</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" title="Facebook">📘</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" title="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="runs.html">Weekly Runs</a></li>
+            <li><a href="news.html">Club News &amp; C25K</a></li>
+            <li><a href="members.html">Community Voices</a></li>
+            <li><a href="join.html">Membership &amp; Affiliation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Locations</h4>
+          <ul class="footer-links-list">
+            <li><a href="runs.html#thursday">Pagoda Island &amp; Gay Village (Thursdays)</a></li>
+            <li><a href="runs.html#saturday">Cannon Hill &amp; Local Parkruns (Saturdays)</a></li>
+            <li><a href="runs.html#sunday">Sutton Park &amp; Canal Trails (Sundays)</a></li>
+            <li><a href="about.html">The Fox Bar (Post-Run Socials)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact &amp; Welfare</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:info@birmingham-swifts.co.uk">info@birmingham-swifts.co.uk</a></li>
+            <li><a href="index.html#faqs">Safeguarding &amp; Welfare</a></li>
+            <li><a href="index.html#faqs">Code of Conduct</a></li>
+            <li><a href="join.html">England Athletics Affiliation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Birmingham Swifts Running Club. Proudly inclusive. All rights reserved. 🏳️‍🌈</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js?v=2.5"></script>
+</body>
+</html>

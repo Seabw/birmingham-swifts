@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Us & Membership — Birmingham Swifts Running Club</title>
+  <meta name="description" content="Explore Birmingham Swifts membership tiers: Free regular running, £15/yr Club Supporter, or £35/yr England Athletics affiliation with race discounts and marathon ballot access.">
+  <meta name="keywords" content="Join Birmingham Swifts, running club membership Birmingham, England Athletics affiliation, London Marathon club ballot, LGBTQ+ running membership">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Join Us & Membership — Birmingham Swifts Running Club">
+  <meta property="og:description" content="Free to run, affordable to join. Compare membership tiers, England Athletics affiliation, and club perks.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero_running_crew.jpg">
+
+  <!-- Favicon / Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/swifts_logo.jpg">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=2.5">
+</head>
+<body>
+
+  <!-- Top Pride Strip -->
+  <div class="pride-strip"></div>
+
+  <!-- Live Announcement Alert Bar -->
+  <aside class="live-alert-bar" id="live-announcement-bar" style="display: none;">
+    <span class="live-alert-icon">📣</span>
+    <span class="live-alert-text" id="live-announcement-text">
+      Welcome to Birmingham Swifts! Join our Thursday flagship social run in the Gay Village.
+    </span>
+    <button class="live-alert-close" id="live-alert-close-btn" aria-label="Dismiss announcement">&times;</button>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="main-nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand" id="brand-logo-link">
+        <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          <span class="nav-brand-subtitle">LGBTQ+ & Allies Running Club</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="runs.html" class="nav-link">Weekly Runs</a></li>
+        <li><a href="news.html" class="nav-link">Club News</a></li>
+        <li><a href="members.html" class="nav-link">Members</a></li>
+        <li><a href="join.html" class="nav-link active">Join Us</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li class="mobile-only-action">
+          <button class="btn btn-primary open-taster-btn mobile-menu-cta">🏃‍♂️ Book a Taster Run</button>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark / Light Theme" title="Toggle Theme">
+          🌙
+        </button>
+        <button class="btn btn-primary" id="open-taster-modal-btn">
+          🏃‍♂️ Book a Taster Run
+        </button>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="Open mobile menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       SUBPAGE HERO
+       ========================================================================== -->
+  <header class="subpage-hero">
+    <div class="container">
+      <div class="subpage-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <span>Join Us</span>
+      </div>
+      <h1 class="subpage-hero-title">Club Membership &amp; Affiliation</h1>
+      <p class="subpage-hero-desc">
+        All club runs are 100% free with no mandatory fees. If you'd like to support the club or race officially, choose one of our flexible annual membership tiers below.
+      </p>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT: 3 MEMBERSHIP TIERS
+       ========================================================================== -->
+  <main class="subpage-content">
+    <div class="container">
+
+      <div class="pricing-grid" id="pricing-container">
+        <!-- Taster / Regular Runner Tier -->
+        <div class="pricing-card">
+          <h3 class="pricing-title">Club Runner &amp; Tasters</h3>
+          <div class="pricing-cost">£0 <span>/ open to all</span></div>
+          <ul class="pricing-features">
+            <li>Join Thursday social runs &amp; weekend meetups</li>
+            <li>All 5+ pace groups and Walk-to-Run</li>
+            <li>Friendly run leaders &amp; tail walkers</li>
+            <li>Post-run social drinks at The Fox</li>
+            <li>Inclusive community with zero subscription</li>
+          </ul>
+          <button class="btn btn-secondary open-taster-btn">Book a Taster Run</button>
+        </div>
+
+        <!-- Supporter Member Tier -->
+        <div class="pricing-card featured">
+          <h3 class="pricing-title">Club Supporter Member</h3>
+          <div class="pricing-cost">£15 <span>/ year</span></div>
+          <ul class="pricing-features">
+            <li>Official Birmingham Swifts membership</li>
+            <li>Club kit discounts (pride vests, tees &amp; hoodies)</li>
+            <li>Annual club challenges &amp; celebration awards</li>
+            <li>Private club WhatsApp &amp; member community</li>
+            <li>Supports club equipment, venue bag drops &amp; leader training</li>
+          </ul>
+          <button class="btn btn-primary open-taster-btn">Join as Club Member</button>
+        </div>
+
+        <!-- England Athletics Affiliated -->
+        <div class="pricing-card">
+          <h3 class="pricing-title">England Athletics Affiliated</h3>
+          <div class="pricing-cost">£35 <span>/ year</span></div>
+          <ul class="pricing-features">
+            <li>All Club Supporter benefits included</li>
+            <li>Official England Athletics (EA) athlete registration</li>
+            <li>£2+ discount on all UK road &amp; trail races</li>
+            <li>London Marathon club ballot entry eligibility</li>
+            <li>Personal race insurance &amp; EA partner perks</li>
+          </ul>
+          <button class="btn btn-secondary open-taster-btn">Join with EA Affiliation</button>
+        </div>
+      </div>
+
+      <!-- Feature Comparison Matrix -->
+      <div class="membership-table-wrapper">
+        <table class="membership-table">
+          <thead>
+            <tr>
+              <th>Membership Benefits</th>
+              <th>Free Runner (£0)</th>
+              <th>Club Supporter (£15/yr)</th>
+              <th>EA Affiliated (£35/yr)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Thursday Social Runs (All Pace Groups)</td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>Weekend Parkruns &amp; Long Runs</td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>Bag Drop &amp; Venue Restroom Facilities</td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>Official Club Member Status</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>Exclusive Club Kit Discounts (Pride Vests &amp; Tees)</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>Private Club WhatsApp Community Channels</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>Annual Club Awards &amp; Subsidized Socials</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>England Athletics (EA) Athlete Licence Number</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>£2+ Race Entry Discounts Nationwide</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>TCS London Marathon Club Ballot Eligibility</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+            <tr>
+              <td>Personal Race Insurance &amp; EA Partner Deals</td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="dash-icon">—</span></td>
+              <td><span class="check-icon">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Membership FAQs -->
+      <article class="about-narrative-card">
+        <h3>Membership FAQs</h3>
+        <p>
+          <strong>Do I have to pay to run with Birmingham Swifts?</strong><br>
+          No! All of our weekly Thursday sessions and weekend runs are completely free and open to everyone. You do not need to be a paid member to join our group runs.
+        </p>
+        <p>
+          <strong>What is England Athletics (EA) affiliation?</strong><br>
+          England Athletics is the national governing body for running clubs in England. Becoming an affiliated member gives you a registered athlete license number, personal accident insurance during races and training, discounted entry fees on UK road and trail races, and access to our annual club London Marathon ballot allocation.
+        </p>
+        <p>
+          <strong>Can I transfer my EA affiliation from another club?</strong><br>
+          Yes! If you are already affiliated with another running club and would like Birmingham Swifts to become your first-claim or second-claim club, you can request an easy online transfer through the England Athletics myAthletics portal.
+        </p>
+        <p>
+          <strong>Where does the £15 / £35 membership fee go?</strong><br>
+          The club is entirely run by volunteers and non-profit. The £15 supporter fee directly covers club equipment (high-vis vests, first aid supplies, bag drop venue hire, website maintenance) and subsidizes training courses for new Run Leaders. In the £35 tier, £19 goes directly to England Athletics for your national licence fee.
+        </p>
+      </article>
+
+      <!-- Subpage Call to Action -->
+      <div class="subpage-cta-box">
+        <h3>Still Have Questions?</h3>
+        <p>
+          Come along for a free Thursday social run and chat with our committee members and run leaders in person at The Fox!
+        </p>
+        <button class="btn btn-rainbow open-taster-btn">
+          🏃‍♂️ Book a Taster Run
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL DIALOG: BOOK TASTER RUN
+       ========================================================================== -->
+  <div class="modal-overlay" id="taster-modal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 style="font-size: 1.4rem; margin-bottom: 6px;">🏃‍♂️ Book a Taster Run</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">
+        Join us for a friendly, no-pressure run with Birmingham Swifts. We'll introduce you to your group leader!
+      </p>
+
+      <form id="taster-form">
+        <div class="form-group">
+          <label class="form-label" for="taster-name">Full Name</label>
+          <input type="text" id="taster-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-email">Email Address</label>
+          <input type="email" id="taster-email" class="form-input" placeholder="alex@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-session">Select Session</label>
+          <select id="taster-session" class="form-select">
+            <option value="thursday">Thursday Social Run (Main Club Run, Gay Village, 6:50 PM)</option>
+            <option value="saturday">Saturday Parkrun Meetup (Local 5k, 8:45 AM)</option>
+            <option value="sunday">Sunday Long Run (Half / Marathon / Ultra Training, 9:00 AM)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="taster-pace">Approximate Pace / Experience</label>
+          <select id="taster-pace" class="form-select">
+            <option value="beginner">Beginner / Walk-to-Run (Couch to 5k)</option>
+            <option value="easy">Casual 5k (35-40 min / 7:00-8:00 min/km)</option>
+            <option value="steady">Steady 5k (28-34 min / 6:00-6:45 min/km)</option>
+            <option value="brisk">Brisk 5k (24-27 min / 5:00-5:45 min/km)</option>
+            <option value="fast">Fast 5k (&lt; 23 min / &lt; 4:45 min/km)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-rainbow" style="width: 100%; margin-top: 8px;">
+          Confirm Taster Booking ✨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand">
+            <img src="assets/swifts_logo.jpg" alt="Birmingham Swifts Logo" class="nav-logo-img">
+            <span class="nav-brand-title">BIRMINGHAM SWIFTS</span>
+          </div>
+          <p class="footer-brand-p">
+            Birmingham's inclusive LGBTQ+ &amp; allies running club. England Athletics affiliated. Run with pride, make lifelong friends, and achieve your personal goals.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.strava.com/clubs/birmingham-swifts" target="_blank" rel="noopener" class="social-icon-btn" title="Strava Club">🏃</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" title="Instagram">📸</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" title="Facebook">📘</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon-btn" title="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="runs.html">Weekly Runs</a></li>
+            <li><a href="news.html">Club News &amp; C25K</a></li>
+            <li><a href="members.html">Community Voices</a></li>
+            <li><a href="join.html">Membership &amp; Affiliation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Locations</h4>
+          <ul class="footer-links-list">
+            <li><a href="runs.html#thursday">Pagoda Island &amp; Gay Village (Thursdays)</a></li>
+            <li><a href="runs.html#saturday">Cannon Hill &amp; Local Parkruns (Saturdays)</a></li>
+            <li><a href="runs.html#sunday">Sutton Park &amp; Canal Trails (Sundays)</a></li>
+            <li><a href="about.html">The Fox Bar (Post-Run Socials)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact &amp; Welfare</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:info@birmingham-swifts.co.uk">info@birmingham-swifts.co.uk</a></li>
+            <li><a href="index.html#faqs">Safeguarding &amp; Welfare</a></li>
+            <li><a href="index.html#faqs">Code of Conduct</a></li>
+            <li><a href="join.html">England Athletics Affiliation</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Birmingham Swifts Running Club. Proudly inclusive. All rights reserved. 🏳️‍🌈</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js?v=2.5"></script>
+</body>
+</html>
