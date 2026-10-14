@@ -59,23 +59,24 @@ function displayLiveAlert(message) {
 }
 
 /* --------------------------------------------------------------------------
-   2. Dark / Light Theme Toggle with LocalStorage
+   2. Dark / Light Theme Toggle with LocalStorage (Defaults to Dark Mode)
    -------------------------------------------------------------------------- */
 function initThemeToggle() {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const htmlRoot = document.documentElement;
 
-  const savedTheme = localStorage.getItem('swifts-theme') || 'dark';
+  // Always default to 'dark' mode unless explicitly selected
+  const savedTheme = localStorage.getItem('swifts-theme-v2') || 'dark';
   htmlRoot.setAttribute('data-theme', savedTheme);
   updateThemeIcon(themeToggleBtn, savedTheme);
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = htmlRoot.getAttribute('data-theme');
+      const currentTheme = htmlRoot.getAttribute('data-theme') || 'dark';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
       htmlRoot.setAttribute('data-theme', newTheme);
-      localStorage.setItem('swifts-theme', newTheme);
+      localStorage.setItem('swifts-theme-v2', newTheme);
       updateThemeIcon(themeToggleBtn, newTheme);
     });
   }
@@ -83,8 +84,11 @@ function initThemeToggle() {
 
 function updateThemeIcon(btn, theme) {
   if (!btn) return;
-  btn.textContent = theme === 'dark' ? '🌙' : '☀️';
+  // In dark mode: show sun so user can click to switch to light mode
+  // In light mode: show moon so user can click to switch to dark mode
+  btn.textContent = theme === 'dark' ? '☀️' : '🌙';
   btn.setAttribute('title', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+  btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
 }
 
 /* --------------------------------------------------------------------------
@@ -125,7 +129,7 @@ function initPaceMatcher() {
 
   const paceRecommendations = {
     walk: {
-      title: "🐣 Group 5 / Starting Out (Walk-to-Run)",
+      title: "🐣 Group 5 / Starting Out (Beginners)",
       desc: "Gentle intervals of walking and jogging with patient run leaders. Ideal if you're returning to running or starting fresh!",
       day: "Thursday Social Run (6:50 PM Meet, Pagoda Island)"
     },

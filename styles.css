@@ -973,20 +973,6 @@ body.has-alert .hero-section {
   box-shadow: 0 0 30px var(--swifts-blue-glow);
 }
 
-.pricing-card.featured::before {
-  content: 'COMMUNITY SUPPORTER';
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--gradient-swifts);
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 4px 14px;
-  border-radius: var(--radius-full);
-}
-
 .pricing-title {
   font-size: 1.3rem;
   margin-bottom: 8px;
@@ -1226,22 +1212,46 @@ body.has-alert .hero-section {
   color: var(--text-primary);
 }
 
-.footer-links-list {
-  list-style: none;
+.footer-links-list,
+.footer-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-.footer-links-list li {
-  margin-bottom: 10px;
+.footer-links-list li,
+.footer-links li {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 10px 0 !important;
 }
 
-.footer-links-list a {
+.footer-links-list a,
+.footer-links a {
   font-size: 0.9rem;
   color: var(--text-secondary);
+  display: inline-block;
+  transition: var(--transition);
 }
 
-.footer-links-list a:hover {
+.footer-links-list a:hover,
+.footer-links a:hover {
   color: var(--swifts-blue);
   padding-left: 4px;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.footer-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin: 14px 0 20px;
+  max-width: 320px;
 }
 
 .footer-bottom {
@@ -1289,7 +1299,7 @@ body.has-alert .hero-section {
   .nav-container {
     height: auto;
     min-height: 58px;
-    padding: 8px 0;
+    padding: 8px 18px;
   }
 
   .nav-brand {
