@@ -347,7 +347,7 @@ function initMobileMenu() {
  * Fetches data from a published Google Sheet tab using Google Visualization API
  */
 async function fetchGoogleSheetTab(sheetId, tabName) {
-  const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(tabName)}`;
+  const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&headers=1&sheet=${encodeURIComponent(tabName)}`;
   const response = await fetch(url);
   const text = await response.text();
   
