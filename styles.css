@@ -564,7 +564,7 @@ body.has-alert .hero-section {
 
 .hero-photo-badge {
   position: absolute;
-  bottom: 14px;
+  top: 14px;
   left: 14px;
   display: inline-flex;
   align-items: center;
@@ -1582,7 +1582,7 @@ body.has-alert .hero-section {
   }
 
   .hero-photo-badge {
-    bottom: 8px;
+    top: 8px;
     left: 8px;
     font-size: 0.72rem;
     padding: 4px 10px;
