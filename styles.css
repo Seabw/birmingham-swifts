@@ -516,13 +516,19 @@ body.has-alert .hero-section {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 920px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge-pill {
   display: inline-flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 4px;
   background: rgba(2, 132, 199, 0.15);
   border: 1px solid rgba(2, 132, 199, 0.4);
@@ -532,7 +538,7 @@ body.has-alert .hero-section {
   font-size: 0.86rem;
   font-weight: 700;
   color: #38bdf8;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   animation: pulseGlow 3s infinite;
   max-width: 100%;
   box-sizing: border-box;
@@ -541,6 +547,7 @@ body.has-alert .hero-section {
 .hero-badge-line {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   line-height: 1.35;
 }
@@ -566,6 +573,7 @@ body.has-alert .hero-section {
   letter-spacing: -1.2px;
   margin-bottom: 20px;
   line-height: 1.1;
+  text-align: center;
   overflow-wrap: break-word;
   word-break: normal;
 }
@@ -581,15 +589,17 @@ body.has-alert .hero-section {
 .hero-description {
   font-size: clamp(1.05rem, 2vw, 1.25rem);
   color: var(--text-secondary);
-  margin-bottom: 32px;
-  max-width: 650px;
+  margin: 0 auto 32px;
+  max-width: 680px;
+  text-align: center;
 }
 
 .hero-cta-group {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
-  margin-bottom: 32px;
+  margin: 0 auto 32px;
 }
 
 .hero-photo-showcase {
@@ -1597,19 +1607,23 @@ body.has-alert .hero-section {
 
   .hero-content {
     max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
   }
 
   .hero-badge-pill {
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 4px;
     font-size: 0.78rem;
     line-height: 1.35;
     padding: 8px 14px;
     border-radius: 12px;
     max-width: 100%;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
     box-sizing: border-box;
   }
 
@@ -1618,6 +1632,7 @@ body.has-alert .hero-section {
     letter-spacing: -0.6px;
     line-height: 1.15;
     margin-bottom: 16px;
+    text-align: center;
     overflow-wrap: break-word;
     word-break: normal;
   }
@@ -1629,14 +1644,16 @@ body.has-alert .hero-section {
   .hero-description {
     font-size: 0.96rem;
     line-height: 1.55;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
+    text-align: center;
   }
 
   .hero-cta-group {
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    margin-bottom: 32px;
+    max-width: 320px;
+    margin: 0 auto 32px;
   }
 
   .hero-cta-group .btn {
