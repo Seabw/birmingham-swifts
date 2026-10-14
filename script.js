@@ -8,7 +8,7 @@ window.SWIFTS_CONFIG = {
   // 1. Create a Google Sheet with the recommended tabs
   // 2. Click File -> Share -> Anyone with the link can view
   // 3. Paste the Sheet ID here (the long ID between /d/ and /edit in the URL)
-  googleSheetId: '', 
+  googleSheetId: '1tNdQuPdBsQifwQJttXNJwoZzH9H3bg5eKp2gaA0ajbw', 
   enableLiveSync: true,
   autoRefreshMinutes: 5,
 };
@@ -424,6 +424,22 @@ async function initGoogleSheetsCMS(sheetId) {
       console.warn('[Swifts CMS] Membership_Pricing tab skipped:', e.message);
     }
 
+    // 6. Fetch Coaches
+    try {
+      const coachesRows = await fetchGoogleSheetTab(sheetId, 'Coaches');
+      renderDynamicCoaches(coachesRows);
+    } catch (e) {
+      console.warn('[Swifts CMS] Coaches tab skipped:', e.message);
+    }
+
+    // 7. Fetch Committee
+    try {
+      const committeeRows = await fetchGoogleSheetTab(sheetId, 'Committee');
+      renderDynamicCommittee(committeeRows);
+    } catch (e) {
+      console.warn('[Swifts CMS] Committee tab skipped:', e.message);
+    }
+
     console.log('[Swifts CMS] Live data synchronized successfully from Google Sheets! ✨');
   } catch (err) {
     console.error('[Swifts CMS] Error syncing from Google Sheets:', err);
@@ -593,4 +609,84 @@ function renderDynamicPricing(pricing) {
   }).join('');
 
   initTasterModal();
+}
+
+/**
+ * Render Dynamic Coaches from Google Sheets
+ */
+function renderDynamicCoaches(coaches) {
+  const container = document.getElementById('coaches-grid');
+  if (!container || !coaches || coaches.length === 0) return;
+
+  const validCoaches = coaches.filter(c => c.name && c.name.trim() !== '');
+  if (validCoaches.length === 0) return;
+
+  validCoaches.sort((a, b) => (parseInt(a.order) || 99) - (parseInt(b.order) || 99));
+
+  container.innerHTML = validCoaches.map(coach => {
+    const photoUrl = coach.photo_url || 'assets/portrait_coach.jpg';
+    const objectPos = photoUrl.includes('christopher') ? 'style="object-position: center 20%;"' : '';
+    const quoteHtml = coach.quote ? `<div class="coach-quote">"${coach.quote.replace(/^["“”]|["“”]$/g, '').trim()}"</div>` : '';
+
+    return `
+      <article class="coach-card">
+        <div class="coach-img-wrap">
+          <img src="${photoUrl}" alt="Coach ${coach.name}" class="coach-img" ${objectPos}>
+        </div>
+        <span class="coach-badge">${coach.badge || 'EA Coach in Running Fitness (CiRF)'}</span>
+        <h3 class="coach-name">${coach.name}</h3>
+        <div class="coach-specialty">${coach.specialty || 'Club Coach'}</div>
+        <p class="coach-desc">
+          ${coach.description || ''}
+        </p>
+        ${quoteHtml}
+      </article>
+    `;
+  }).join('');
+}
+
+/**
+ * Render Dynamic Committee from Google Sheets
+ */
+function renderDynamicCommittee(committee) {
+  const container = document.getElementById('committee-grid');
+  if (!container || !committee || committee.length === 0) return;
+
+  // Safety check: ensure committee rows actually have a role (prevents fallback from coaches tab)
+  const validMembers = committee.filter(m => m.name && m.name.trim() !== '' && (m.role || m.specialty?.includes('Secretary') || m.specialty?.includes('Chair') || m.specialty?.includes('Treasurer')));
+  if (validMembers.length === 0) return;
+
+  validMembers.sort((a, b) => (parseInt(a.order) || 99) - (parseInt(b.order) || 99));
+
+  container.innerHTML = validMembers.map(member => {
+    const photoUrl = member.photo_url || 'assets/portrait_coach.jpg';
+    const objectPos = photoUrl.includes('bo_wang') ? 'style="object-position: center 15%;"' : '';
+    const badgeText = member.badge || (member.role?.includes('Chair') || member.role?.includes('Secretary') ? 'Executive Role' : 'Committee Role');
+    const badgeStyle = badgeText.toLowerCase().includes('safety') || badgeText.toLowerCase().includes('welfare') || badgeText.toLowerCase().includes('inclusion')
+      ? 'style="background: rgba(236,72,153,0.15); color: #f472b6; border-color: rgba(236,72,153,0.35);"'
+      : '';
+
+    let respHtml = '';
+    if (member.responsibilities) {
+      const items = member.responsibilities.split(/[;\n]/).map(r => r.trim()).filter(Boolean);
+      if (items.length > 0) {
+        respHtml = `<ul class="committee-responsibilities">${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+      }
+    }
+
+    return `
+      <article class="coach-card">
+        <div class="coach-img-wrap">
+          <img src="${photoUrl}" alt="${member.name} - ${member.role || 'Committee'}" class="coach-img" ${objectPos}>
+        </div>
+        <span class="coach-badge" ${badgeStyle}>${badgeText}</span>
+        <h3 class="coach-name">${member.name}</h3>
+        <div class="coach-specialty">${member.specialty || member.role || 'Committee Member'}</div>
+        <p class="coach-desc">
+          ${member.description || ''}
+        </p>
+        ${respHtml}
+      </article>
+    `;
+  }).join('');
 }
