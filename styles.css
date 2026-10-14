@@ -7,9 +7,9 @@
 :root {
   /* Color Palette - Vibrant Pride Dark Mode (Default) */
   --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-card: rgba(17, 24, 39, 0.75);
-  --bg-card-hover: rgba(30, 41, 59, 0.85);
+  --bg-secondary: #0f172a;
+  --bg-card: rgba(17, 24, 39, 0.78);
+  --bg-card-hover: rgba(30, 41, 59, 0.88);
   --bg-glass: rgba(255, 255, 255, 0.04);
   --border-glass: rgba(255, 255, 255, 0.1);
   --border-glass-hover: rgba(255, 255, 255, 0.25);
@@ -18,9 +18,19 @@
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   
-  /* Brand & Pride Accents */
-  --swifts-blue: #0284c7;
-  --swifts-blue-glow: rgba(2, 132, 199, 0.35);
+  /* Birmingham Swifts Official Kit Colors (Royal Blue & Golden Yellow Sash) */
+  --swifts-blue: #1d4ed8;            /* Official Kit Royal Blue Body */
+  --swifts-blue-deep: #1e3a8a;       /* Deep Athletic Navy */
+  --swifts-blue-vivid: #2563eb;      /* Electric Royal Blue */
+  --swifts-blue-light: #38bdf8;      /* Luminous Sky Highlight */
+  --swifts-blue-glow: rgba(29, 78, 216, 0.4);
+
+  --swifts-yellow: #f59e0b;          /* Official Kit Golden Yellow / Amber Sash */
+  --swifts-yellow-bright: #fbbf24;   /* Radiant Gold Accent & Wordmark */
+  --swifts-yellow-dark: #d97706;     /* Accessible High-Contrast Gold */
+  --swifts-yellow-glow: rgba(245, 158, 11, 0.45);
+
+  /* Pride Accents (From T-Shirt Side Ribbons & Community Pride) */
   --pride-purple: #8b5cf6;
   --pride-pink: #ec4899;
   --pride-cyan: #06b6d4;
@@ -29,9 +39,10 @@
   --pride-red: #ef4444;
 
   --gradient-pride: linear-gradient(135deg, #ef4444 0%, #f59e0b 20%, #10b981 40%, #06b6d4 60%, #8b5cf6 80%, #ec4899 100%);
-  --gradient-swifts: linear-gradient(135deg, #0284c7 0%, #3b82f6 50%, #8b5cf6 100%);
+  --gradient-swifts: linear-gradient(135deg, #1d4ed8 0%, #2563eb 45%, #f59e0b 100%);
+  --gradient-kit-sash: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
   --gradient-card: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 100%);
-  --gradient-hero-overlay: linear-gradient(180deg, rgba(10, 14, 26, 0.7) 0%, rgba(10, 14, 26, 0.95) 100%);
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(10, 14, 26, 0.72) 0%, rgba(10, 14, 26, 0.96) 100%);
 
   /* Typography */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -41,7 +52,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.35);
+  --shadow-glow: 0 0 25px rgba(29, 78, 216, 0.35);
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -52,26 +63,34 @@
   --container-max: 1200px;
 }
 
-/* Light Mode Overrides */
+/* Light Mode Overrides - Infused with Official Royal Blue & Kit Gold/Yellow */
 [data-theme="light"] {
   --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-secondary: #f0f5ff; /* Subtle athletic ice-blue tint echoing the blue kit */
+  --bg-card: rgba(255, 255, 255, 0.96);
   --bg-card-hover: #ffffff;
-  --bg-glass: rgba(0, 0, 0, 0.02);
-  --border-glass: rgba(0, 0, 0, 0.08);
-  --border-glass-hover: rgba(0, 0, 0, 0.16);
+  --bg-glass: rgba(29, 78, 216, 0.035);
+  --border-glass: rgba(29, 78, 216, 0.14); /* Crisp royal blue card border */
+  --border-glass-hover: rgba(245, 158, 11, 0.6); /* Vibrant kit gold hover */
 
   --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
 
-  --gradient-card: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.005) 100%);
-  --gradient-hero-overlay: linear-gradient(180deg, rgba(248, 250, 252, 0.82) 0%, rgba(248, 250, 252, 0.98) 100%);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 25px rgba(2, 132, 199, 0.2);
+  --swifts-blue: #1d4ed8;
+  --swifts-blue-deep: #1e3a8a;
+  --swifts-yellow: #d97706; /* High contrast gold for light mode text & accents */
+  --swifts-yellow-bright: #f59e0b;
+
+  --gradient-swifts: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #d97706 100%);
+  --gradient-kit-sash: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%);
+  --gradient-card: linear-gradient(180deg, rgba(29, 78, 216, 0.02) 0%, rgba(245, 158, 11, 0.01) 100%);
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(240, 245, 255, 0.85) 0%, rgba(248, 250, 252, 0.98) 100%);
+  
+  --shadow-sm: 0 2px 8px rgba(29, 78, 216, 0.06);
+  --shadow-md: 0 8px 24px rgba(29, 78, 216, 0.09);
+  --shadow-lg: 0 16px 40px rgba(29, 78, 216, 0.14);
+  --shadow-glow: 0 0 25px rgba(29, 78, 216, 0.22);
 }
 
 /* Base Resets */
@@ -248,10 +267,7 @@ body.has-alert .hero-section {
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  background: var(--gradient-swifts);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
   white-space: nowrap;
   line-height: 1.2;
 }
@@ -2360,21 +2376,439 @@ body.has-alert .hero-section {
   flex-grow: 1;
 }
 
-/* Light Theme Adjustments */
+/* ==========================================================================
+   OFFICIAL KIT COLOR INTEGRATION (ROYAL BLUE & GOLD/YELLOW SASH)
+   ========================================================================== */
+
+/* Brand & Typography Kit Accents */
+.brand-swifts-gold {
+  color: var(--swifts-yellow-bright);
+  font-weight: 900;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+}
+
+/* Light Theme Comprehensive Enhancements */
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 2px solid rgba(29, 78, 216, 0.16);
+  box-shadow: 0 4px 20px rgba(29, 78, 216, 0.06);
+}
+
+[data-theme="light"] .nav-brand-title {
+  color: #1e3a8a;
+  background: none;
+  -webkit-text-fill-color: initial;
+}
+
+[data-theme="light"] .brand-swifts-gold {
+  color: #d97706; /* Accessible rich gold from kit */
+  text-shadow: none;
+}
+
+[data-theme="light"] .nav-logo-img {
+  border: 2px solid #1d4ed8;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.25);
+}
+
+[data-theme="light"] .nav-link {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+[data-theme="light"] .nav-link:hover {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] .nav-link.active {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: rgba(29, 78, 216, 0.08);
+  border-color: rgba(29, 78, 216, 0.25);
+  color: #1e3a8a;
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #f59e0b;
+  color: #d97706;
+}
+
+/* Light Mode Buttons */
+[data-theme="light"] .btn-primary {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  color: #ffffff;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
+}
+
+[data-theme="light"] .btn-primary:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+  border-color: #f59e0b;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35), 0 0 12px rgba(29, 78, 216, 0.25);
+}
+
+[data-theme="light"] .btn-secondary {
+  background: #ffffff;
+  color: #1e3a8a;
+  border: 1.5px solid rgba(29, 78, 216, 0.25);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: #f59e0b;
+  color: #d97706;
+}
+
+/* Light Mode Hero Elements */
+[data-theme="light"] .hero-badge-pill {
+  background: rgba(29, 78, 216, 0.08);
+  border: 1.5px solid #1d4ed8;
+  color: #1e3a8a;
+  font-weight: 800;
+  box-shadow: 0 2px 10px rgba(29, 78, 216, 0.12);
+}
+
+[data-theme="light"] .hero-stats-bar {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.18);
+  border-top: 3px solid #1d4ed8;
+  box-shadow: 0 10px 30px rgba(29, 78, 216, 0.08);
+}
+
+[data-theme="light"] .stat-number {
+  background: linear-gradient(135deg, #1d4ed8 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="light"] .stat-label {
+  color: #475569;
+  font-weight: 700;
+}
+
+/* Light Mode Section Headers & Filters */
+[data-theme="light"] .section-tag {
+  color: #1d4ed8;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+}
+
+[data-theme="light"] .filter-btn {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  color: #334155;
+}
+
+[data-theme="light"] .filter-btn:hover {
+  background: rgba(29, 78, 216, 0.06);
+  border-color: #1d4ed8;
+  color: #1d4ed8;
+}
+
+[data-theme="light"] .filter-btn.active {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.3);
+}
+
+/* Light Mode Pace Matcher & Results */
+[data-theme="light"] .pace-matcher-box {
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.06) 0%, rgba(245, 158, 11, 0.06) 100%);
+  border: 1px solid rgba(29, 78, 216, 0.18);
+  border-top: 3px solid #1d4ed8;
+}
+
+[data-theme="light"] .matcher-btn {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  color: #1e3a8a;
+}
+
+[data-theme="light"] .matcher-btn:hover,
+[data-theme="light"] .matcher-btn.selected {
+  background: linear-gradient(135deg, #1d4ed8 0%, #f59e0b 100%);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+[data-theme="light"] .matcher-result {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.16);
+  border-left: 5px solid #1d4ed8;
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.08);
+}
+
+/* Light Mode Run Cards & Navigation */
+[data-theme="light"] .run-card,
+[data-theme="light"] .initiative-card,
+[data-theme="light"] .featured-news-card,
+[data-theme="light"] .run-nav-card {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.14);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+}
+
+[data-theme="light"] .run-card:hover,
+[data-theme="light"] .initiative-card:hover,
+[data-theme="light"] .featured-news-card:hover,
+[data-theme="light"] .run-nav-card:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.16), 0 4px 12px rgba(29, 78, 216, 0.1);
+}
+
+[data-theme="light"] .run-card::before {
+  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 50%, #f59e0b 100%);
+}
+
+[data-theme="light"] .pace-pill {
+  background: rgba(29, 78, 216, 0.08);
+  color: #1e40af;
+  border: 1px solid rgba(29, 78, 216, 0.22);
+}
+
+[data-theme="light"] .run-nav-thursday {
+  border-left: 5px solid #1d4ed8;
+  background: linear-gradient(135deg, rgba(29, 78, 216, 0.04), #ffffff);
+}
+
+[data-theme="light"] .run-nav-saturday {
+  border-left: 5px solid #10b981;
+}
+
+[data-theme="light"] .run-nav-sunday {
+  border-left: 5px solid #f59e0b;
+}
+
+[data-theme="light"] .run-nav-btn-text {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] .run-nav-card:hover .run-nav-btn-text {
+  color: #d97706;
+}
+
+/* Light Mode Coaches, Committee & Leaders Cards */
 [data-theme="light"] .committee-card,
 [data-theme="light"] .coach-card,
 [data-theme="light"] .leader-card {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.14);
+  box-shadow: 0 4px 18px rgba(29, 78, 216, 0.06);
 }
 
 [data-theme="light"] .committee-card:hover,
 [data-theme="light"] .coach-card:hover,
 [data-theme="light"] .leader-card:hover {
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  border-color: #f59e0b;
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.18), 0 4px 12px rgba(29, 78, 216, 0.1);
+}
+
+[data-theme="light"] .coach-card::before,
+[data-theme="light"] .committee-card::before {
+  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 50%, #f59e0b 100%);
+}
+
+[data-theme="light"] .coach-badge {
+  background: rgba(29, 78, 216, 0.1);
+  color: #1d4ed8;
+  border: 1px solid rgba(29, 78, 216, 0.25);
+}
+
+[data-theme="light"] .committee-badge {
+  background: rgba(245, 158, 11, 0.14);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="light"] .leader-badge {
+  background: rgba(29, 78, 216, 0.08);
+  color: #1d4ed8;
+  border: 1px solid rgba(29, 78, 216, 0.22);
+}
+
+[data-theme="light"] .coach-specialty,
+[data-theme="light"] .committee-specialty {
+  color: #d97706;
+  font-weight: 700;
+}
+
+[data-theme="light"] .leader-avatar-wrap {
+  border: 2.5px solid #1d4ed8;
+}
+
+[data-theme="light"] .committee-responsibilities li::before {
+  color: #d97706;
 }
 
 [data-theme="light"] .coach-quote {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(29, 78, 216, 0.04);
+  border-left-color: #1d4ed8;
+}
+
+/* Light Mode Pricing / Membership Cards (Join Us) */
+[data-theme="light"] .pricing-card {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.14);
+  box-shadow: 0 4px 18px rgba(29, 78, 216, 0.05);
+}
+
+[data-theme="light"] .pricing-card.featured {
+  border: 2px solid #1d4ed8;
+  box-shadow: 0 10px 32px rgba(29, 78, 216, 0.15), 0 0 0 1px rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="light"] .pricing-card.featured::before {
+  background: linear-gradient(135deg, #1d4ed8 0%, #f59e0b 100%);
+  color: #ffffff;
+}
+
+[data-theme="light"] .pricing-cost {
+  color: #1e3a8a;
+}
+
+[data-theme="light"] .pricing-features li::before {
+  color: #d97706;
+}
+
+/* Light Mode Subpage Hero & Narrative Boxes */
+[data-theme="light"] .subpage-hero {
+  background: linear-gradient(180deg, #edf4ff 0%, #f8fafc 100%);
+  border-bottom: 2px solid rgba(29, 78, 216, 0.12);
+}
+
+[data-theme="light"] .subpage-breadcrumb {
+  background: #ffffff;
+  border-color: rgba(29, 78, 216, 0.15);
+}
+
+[data-theme="light"] .subpage-breadcrumb a {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] .about-narrative-card {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.14);
+  box-shadow: 0 6px 24px rgba(29, 78, 216, 0.06);
+}
+
+/* Light Mode CTA Box - Inspired directly by the Royal Blue & Gold Sash Kit */
+[data-theme="light"] .subpage-cta-box {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 65%, #2563eb 100%);
+  border: 2px solid #f59e0b;
+  box-shadow: 0 12px 36px rgba(29, 78, 216, 0.22);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .subpage-cta-box::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, transparent 50%, rgba(245, 158, 11, 0.25) 100%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .subpage-cta-box h3 {
+  color: #ffffff;
+}
+
+[data-theme="light"] .subpage-cta-box p {
+  color: #e2e8f0;
+}
+
+[data-theme="light"] .subpage-cta-box .btn-rainbow,
+[data-theme="light"] .subpage-cta-box .btn-primary {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+  color: #0f172a;
+  border: none;
+  font-weight: 800;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.45);
+}
+
+[data-theme="light"] .subpage-cta-box .btn-rainbow:hover,
+[data-theme="light"] .subpage-cta-box .btn-primary:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #fde047 100%);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Light Mode Modal & Forms */
+[data-theme="light"] .modal-card {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  border-top: 4px solid #1d4ed8;
+  box-shadow: 0 20px 50px rgba(29, 78, 216, 0.2);
+}
+
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-select {
+  background: #f8fafc;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  color: #0f172a;
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-select:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+}
+
+/* Light Mode FAQs & Footer */
+[data-theme="light"] .faq-item {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.14);
+}
+
+[data-theme="light"] .faq-item.active {
+  border-color: #1d4ed8;
+  box-shadow: 0 6px 20px rgba(29, 78, 216, 0.08);
+}
+
+[data-theme="light"] .faq-question {
+  color: #0f172a;
+}
+
+[data-theme="light"] .faq-item.active .faq-question {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] .faq-icon {
+  color: #d97706;
+}
+
+[data-theme="light"] .footer {
+  background: #f1f5f9;
+  border-top: 3px solid #1d4ed8;
+}
+
+[data-theme="light"] .footer-links-list a:hover {
+  color: #1d4ed8;
+}
+
+[data-theme="light"] .social-icon-btn {
+  background: #ffffff;
+  border-color: rgba(29, 78, 216, 0.2);
+  color: #1e3a8a;
+}
+
+[data-theme="light"] .social-icon-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #f59e0b);
+  color: #ffffff;
+  border-color: #f59e0b;
 }
 
 @media (max-width: 992px) {
