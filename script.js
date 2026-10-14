@@ -347,8 +347,10 @@ function initMobileMenu() {
  * Fetches data from a published Google Sheet tab using Google Visualization API
  */
 async function fetchGoogleSheetTab(sheetId, tabName) {
-  const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&headers=1&sheet=${encodeURIComponent(tabName)}`;
-  const response = await fetch(url);
+  // Add unique timestamp and cache: no-store to prevent any browser caching
+  const cacheBuster = Date.now();
+  const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json&headers=1&sheet=${encodeURIComponent(tabName)}&_t=${cacheBuster}`;
+  const response = await fetch(url, { cache: 'no-store' });
   const text = await response.text();
   
   // Extract JSON payload from Google Visualization response wrapper
@@ -589,45 +591,95 @@ function applyGeneralSettings(rows) {
 }
 
 /**
- * Render Dynamic Runs from Google Sheets
+ * Render Dynamic Runs from Google Sheets (on runs.html and index.html)
  */
 function renderDynamicRuns(runs) {
-  const container = document.getElementById('runs-container');
-  if (!container || !runs || runs.length === 0) return;
+  if (!runs || runs.length === 0) return;
 
   const validRuns = runs.filter(r => (r.day_id || r.day || r.title));
   if (validRuns.length === 0) return;
 
   validRuns.sort((a, b) => (parseInt(a.order) || 99) - (parseInt(b.order) || 99));
 
-  container.innerHTML = validRuns.map(run => {
-    const dayKey = (run.day_id || run.day || 'thursday').toLowerCase().trim();
-    const isOfficial = (run.badge || '').toLowerCase().includes('official') && !(run.badge || '').toLowerCase().includes('un-official') && !(run.badge || '').toLowerCase().includes('unofficial');
-    const badgeClass = isOfficial ? 'official' : 'unofficial';
-    const paceList = (run.paces || 'All Abilities').split(',').map(p => `<span class="pace-pill">${p.trim()}</span>`).join('');
-    
-    return `
-      <article class="run-card" id="${dayKey}" data-day="${dayKey}">
-        <div class="run-card-header">
-          <span class="run-day-badge ${badgeClass}">${run.badge || 'Club Run'}</span>
-          <span class="run-time">⏰ ${run.time || 'Meet 7:00 PM'}</span>
+  // 1. Detailed timetable on runs.html
+  const container = document.getElementById('runs-container');
+  if (container) {
+    container.innerHTML = validRuns.map(run => {
+      const dayKey = (run.day_id || run.day || 'thursday').toLowerCase().trim();
+      const isOfficial = (run.badge || '').toLowerCase().includes('official') && !(run.badge || '').toLowerCase().includes('un-official') && !(run.badge || '').toLowerCase().includes('unofficial');
+      const badgeClass = isOfficial ? 'official' : 'unofficial';
+      const paceList = (run.paces || 'All Abilities').split(',').map(p => `<span class="pace-pill">${p.trim()}</span>`).join('');
+      
+      return `
+        <article class="run-card" id="${dayKey}" data-day="${dayKey}">
+          <div class="run-card-header">
+            <span class="run-day-badge ${badgeClass}">${run.badge || 'Club Run'}</span>
+            <span class="run-time">⏰ ${run.time || 'Meet 7:00 PM'}</span>
+          </div>
+          <h3 class="run-title">${run.title || 'Weekly Club Run'}</h3>
+          <div class="run-location">
+            📍 <span>${run.location || 'Birmingham'}</span>
+          </div>
+          <p class="run-description">
+            ${run.description || ''}
+          </p>
+          <div class="run-paces-list">
+            ${paceList}
+          </div>
+          <button class="btn btn-primary run-select-btn" data-run="${run.title || 'Club Run'}">
+            Book Your First Run
+          </button>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // 2. Summary navigation cards on homepage (index.html)
+  const homeRunsBox = document.getElementById('home-runs-nav-box');
+  if (homeRunsBox) {
+    const thursdayRun = validRuns.find(r => (r.day_id || r.day || '').toLowerCase() === 'thursday') || validRuns[0];
+    const saturdayRun = validRuns.find(r => (r.day_id || r.day || '').toLowerCase() === 'saturday') || validRuns[1];
+    const sundayRun = validRuns.find(r => (r.day_id || r.day || '').toLowerCase() === 'sunday') || validRuns[2];
+
+    if (thursdayRun && saturdayRun && sundayRun) {
+      homeRunsBox.innerHTML = `
+        <a href="runs.html#thursday" class="run-nav-card run-nav-thursday">
+          <div class="run-nav-card-left">
+            <span class="run-day-badge official">${thursdayRun.badge || 'Thursday Evening • Official Main Run'}</span>
+            <h3 class="run-nav-card-title">${thursdayRun.title || 'Thursday Social Run (5k / 7k / 10k)'}</h3>
+            <p class="run-nav-card-meta">📍 ${thursdayRun.location || 'Pagoda Island, Gay Village'} • 🎒 ${thursdayRun.bag_drop || 'Bag drop 6:30 PM at The Fox'} • ⏰ ${thursdayRun.time || '6:50 PM Meet'} • Social at The Fox</p>
+          </div>
+          <div class="run-nav-card-action">
+            <span class="run-nav-btn-text">View Run Details</span>
+          </div>
+        </a>
+
+        <div class="run-nav-sub-row">
+          <a href="runs.html#saturday" class="run-nav-card run-nav-saturday">
+            <div class="run-nav-card-left">
+              <span class="run-day-badge unofficial">${saturdayRun.badge || 'Saturday Morning • Unofficial'}</span>
+              <h3 class="run-nav-card-title">${saturdayRun.title || 'Saturday Parkrun Tour'}</h3>
+              <p class="run-nav-card-meta">📍 ${saturdayRun.location || 'Local Birmingham 5k Parkruns'} • ⏰ ${saturdayRun.time || '8:45 AM Meet'} • Coffee &amp; Catch-up</p>
+            </div>
+            <div class="run-nav-card-action">
+              <span class="run-nav-btn-text">View Details</span>
+            </div>
+          </a>
+
+          <a href="runs.html#sunday" class="run-nav-card run-nav-sunday">
+            <div class="run-nav-card-left">
+              <span class="run-day-badge unofficial">${sundayRun.badge || 'Sunday Morning • Unofficial'}</span>
+              <h3 class="run-nav-card-title">${sundayRun.title || 'Sunday Long Run'}</h3>
+              <p class="run-nav-card-meta">📍 ${sundayRun.location || 'Back of the Mailbox'} • ⏰ ${sundayRun.time || '8:50 AM Meet'} • Half, Marathon &amp; Ultra Training</p>
+            </div>
+            <div class="run-nav-card-action">
+              <span class="run-nav-btn-text">View Details</span>
+            </div>
+          </a>
         </div>
-        <h3 class="run-title">${run.title || 'Weekly Club Run'}</h3>
-        <div class="run-location">
-          📍 <span>${run.location || 'Birmingham'}</span>
-        </div>
-        <p class="run-description">
-          ${run.description || ''}
-        </p>
-        <div class="run-paces-list">
-          ${paceList}
-        </div>
-        <button class="btn btn-primary run-select-btn" data-run="${run.title || 'Club Run'}">
-          Book Your First Run
-        </button>
-      </article>
-    `;
-  }).join('');
+      `;
+    }
+  }
 
   // Re-bind modal triggers
   initTasterModal();
@@ -645,6 +697,28 @@ function renderDynamicStories(stories) {
 
   validStories.sort((a, b) => (parseInt(a.order) || 99) - (parseInt(b.order) || 99));
 
+  // If on homepage (single box), only show the first/featured story with featured-story styling
+  if (container.classList.contains('stories-single-box')) {
+    const story = validStories[0];
+    const initials = story.initials || story.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+    container.innerHTML = `
+      <div class="story-card featured-story">
+        <p class="story-quote">
+          "${story.quote.replace(/^["“”]|["“”]$/g, '').trim()}"
+        </p>
+        <div class="story-author">
+          <div class="author-avatar">${initials}</div>
+          <div>
+            <div class="author-name">${story.name}</div>
+            <div class="author-detail">${story.role || story.detail || 'Swifts Member'}</div>
+          </div>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  // Otherwise on members.html, render the full stories grid
   container.innerHTML = validStories.map(story => {
     const initials = story.initials || story.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
     return `
@@ -690,21 +764,40 @@ function renderDynamicFaqs(faqs) {
 }
 
 /**
- * Render Dynamic Membership Pricing
+ * Render Dynamic Membership Pricing (Always preserves Free Runner Tier)
  */
 function renderDynamicPricing(pricing) {
   const container = document.getElementById('pricing-container');
   if (!container || !pricing || pricing.length === 0) return;
 
-  const validTiers = pricing.filter(p => p.title && p.cost);
-  if (validTiers.length === 0) return;
+  let allTiers = [...pricing];
 
-  validTiers.sort((a, b) => (parseInt(a.order) || 99) - (parseInt(b.order) || 99));
+  // Auto-protect the Free Runner Tier:
+  // If the sheet only defines paid tiers, ensure the Free tier is never lost
+  const hasFreeTier = allTiers.some(t => {
+    const cost = String(t.cost || '').trim();
+    const title = (t.title || '').toLowerCase();
+    return cost === '£0' || cost === '0' || title.includes('free') || title.includes('first run');
+  });
 
-  container.innerHTML = validTiers.map(tier => {
+  if (!hasFreeTier) {
+    allTiers.unshift({
+      title: 'Club Runner & First Run',
+      cost: '£0',
+      period: 'open to all',
+      features: 'Join Thursday social runs & weekend meetups, Bag drop 6:30 PM at The Fox (Gay Village), 5k 7k & 10k friendly group routes, Friendly run leaders & tail runners, Post-run social drinks at The Fox, Inclusive community with zero subscription',
+      featured: false,
+      order: 0
+    });
+  }
+
+  allTiers.sort((a, b) => (parseInt(a.order) || 0) - (parseInt(b.order) || 0));
+
+  container.innerHTML = allTiers.map(tier => {
     const isFeatured = String(tier.featured).toLowerCase() === 'true' || String(tier.is_popular).toLowerCase() === 'true';
     const features = (tier.features || '').split(',').map(f => `<li>${f.trim()}</li>`).join('');
     const btnClass = isFeatured ? 'btn btn-primary open-taster-btn' : 'btn btn-secondary open-taster-btn';
+    const btnText = String(tier.cost).trim() === '£0' ? 'Book Your First Run' : `Join as ${tier.title}`;
 
     return `
       <div class="pricing-card ${isFeatured ? 'featured' : ''}">
@@ -713,7 +806,7 @@ function renderDynamicPricing(pricing) {
         <ul class="pricing-features">
           ${features}
         </ul>
-        <button class="${btnClass}">Join as ${tier.title}</button>
+        <button class="${btnClass}">${btnText}</button>
       </div>
     `;
   }).join('');
@@ -836,48 +929,78 @@ function renderDynamicCommittee(committee) {
 }
 
 /**
- * Render Dynamic Club News from Google Sheets
+ * Render Dynamic Club News from Google Sheets (on news.html and index.html)
  */
 function renderDynamicNews(news) {
-  const container = document.getElementById('news-grid');
-  if (!container || !news || news.length === 0) return;
+  if (!news || news.length === 0) return;
 
   const validNews = news.filter(n => n.title && n.title.trim() !== '');
   if (validNews.length === 0) return;
 
   validNews.sort((a, b) => (parseInt(a.order) || 99) - (parseInt(b.order) || 99));
 
-  container.innerHTML = validNews.map(item => {
-    const photoUrl = item.photo_url || 'assets/hero_running_crew.jpg';
-    const badgeText = item.tag ? item.tag : 'Swifts News';
-    let actionHtml = '';
-    const link = (item.link_url || '').toLowerCase().trim();
-    if (link === 'register' || link === 'taster' || link === 'c25k') {
-      actionHtml = `<button class="btn btn-primary open-taster-btn">Register for ${item.title}</button>`;
-    } else if (link.startsWith('http') || link.endsWith('.html') || link.includes('#')) {
-      actionHtml = `<a href="${item.link_url}" class="btn btn-secondary">Learn More</a>`;
-    } else {
-      actionHtml = `<button class="btn btn-secondary open-taster-btn">Learn More</button>`;
-    }
-
-    return `
-      <article class="initiative-card">
+  // 1. Featured news card on homepage (index.html)
+  const homeFeatured = document.getElementById('home-featured-news');
+  if (homeFeatured) {
+    const feat = validNews[0];
+    const photoUrl = feat.photo_url || 'assets/c25k_graduates.jpg?v=3';
+    const badgeText = feat.tag ? `🐣 ${feat.tag}` : '🐣 Couch to 5K Program';
+    homeFeatured.innerHTML = `
+      <div class="initiative-card featured-news-card">
         <div class="initiative-img-box">
-          <img src="${photoUrl}" alt="${item.title}" class="initiative-img">
+          <img src="${photoUrl}" alt="${feat.title}" class="initiative-img">
           <span class="initiative-badge">${badgeText}</span>
         </div>
         <div class="initiative-body">
-          <h3 class="initiative-title">${item.title}</h3>
+          <h3 class="initiative-title">${feat.title}</h3>
           <p class="initiative-text">
-            ${item.summary || ''}
+            ${feat.summary || ''}
           </p>
           <div>
-            ${actionHtml}
+            <button class="btn btn-secondary open-taster-btn">
+              Join Next C25K Cohort
+            </button>
           </div>
         </div>
-      </article>
+      </div>
     `;
-  }).join('');
+  }
+
+  // 2. Full news grid on news.html
+  const container = document.getElementById('news-grid');
+  if (container) {
+    container.innerHTML = validNews.map(item => {
+      const photoUrl = item.photo_url || 'assets/hero_running_crew.jpg';
+      const badgeText = item.tag ? item.tag : 'Swifts News';
+      let actionHtml = '';
+      const link = (item.link_url || '').toLowerCase().trim();
+      if (link === 'register' || link === 'taster' || link === 'c25k') {
+        actionHtml = `<button class="btn btn-primary open-taster-btn">Register for ${item.title}</button>`;
+      } else if (link.startsWith('http') || link.endsWith('.html') || link.includes('#')) {
+        actionHtml = `<a href="${item.link_url}" class="btn btn-secondary">Learn More</a>`;
+      } else {
+        actionHtml = `<button class="btn btn-secondary open-taster-btn">Learn More</button>`;
+      }
+
+      return `
+        <article class="initiative-card">
+          <div class="initiative-img-box">
+            <img src="${photoUrl}" alt="${item.title}" class="initiative-img">
+            <span class="initiative-badge">${badgeText}</span>
+          </div>
+          <div class="initiative-body">
+            <h3 class="initiative-title">${item.title}</h3>
+            <p class="initiative-text">
+              ${item.summary || ''}
+            </p>
+            <div>
+              ${actionHtml}
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
 
   initTasterModal();
 }
