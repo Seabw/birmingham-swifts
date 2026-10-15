@@ -7,27 +7,19 @@ This guide explains how the **Birmingham Swifts Running Club committee** can edi
 ## ⚡️ Quick Overview: How It Works
 
 ```
-[ Google Spreadsheet ] ---> (Live Google Query API) ---> [ Swifts Website ]
-(Committee edits rows)                                  (Updates in real-time)
+[ Google Spreadsheet ] ---> (Live Google Visualization API) ---> [ Swifts Website ]
+(Committee edits rows)                                           (Updates in real-time)
 ```
 
-1. Create a Google Spreadsheet (e.g., named `Birmingham Swifts Website CMS`).
-2. Add the **5 standard tabs** listed below.
-3. Click **Share** $\to$ Change access to **"Anyone with the link can view"**.
-4. Copy the Sheet ID from the URL:
-   `https://docs.google.com/spreadsheets/d/`**`1AbCdEfGhIjKlMnOpQrStUvWxYz12345678`**`/edit`
-5. Paste that ID into `script.js`:
-   ```javascript
-   window.SWIFTS_CONFIG = {
-     googleSheetId: '1AbCdEfGhIjKlMnOpQrStUvWxYz12345678',
-   };
-   ```
+* **Live Connected Sheet**: [Birmingham Swifts Website CMS](https://docs.google.com/spreadsheets/d/1tNdQuPdBsQifwQJttXNJwoZzH9H3bg5eKp2gaA0ajbw/edit)
+* **Sheet ID**: `1tNdQuPdBsQifwQJttXNJwoZzH9H3bg5eKp2gaA0ajbw` (configured in `script.js`).
+* **Format**: Anyone with the link can view. The website queries each tab directly via the Google Visualization API with `headers=1`.
 
 ---
 
 ## 📑 Spreadsheet Tabs & Column Specifications
 
-Create the following **5 tabs** in your Google Spreadsheet:
+The CMS synchronizes the following **8 tabs** in real time:
 
 ---
 
@@ -80,7 +72,43 @@ Controls the membership cards, prices, and bullet point benefits.
 
 ---
 
-### Tab 5: `FAQs`
+### Tab 5: `Coaches`
+Controls the coaches directory on the Coaches & Leaders page.
+
+| name | role | qualification | bio | image | specialties |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `Alice Smith` | `Head Coach` | `CiRF / EA Level 2` | `Coaching endurance and marathon pacing since 2018.` | `assets/portrait_coach_alice.jpg` | `Marathon, Technique, Strength` |
+
+---
+
+### Tab 6: `Run_Leaders`
+Controls the run leaders directory on the Coaches & Leaders page.
+
+| name | role | qualification | bio | image | pace_groups |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `Christopher Lee` | `Run Leader` | `LiRF Qualified` | `Leads Group 3 and Thursday canal social runs.` | `assets/portrait_coach_christopher.jpg` | `Group 3 (6:00-6:45), 5k-10k` |
+
+---
+
+### Tab 7: `Committee`
+Controls the committee directory on the Committee page.
+
+| name | role | email | bio | image |
+| :--- | :--- | :--- | :--- | :--- |
+| `Gabriel Stirling` | `Club Chair` | `chair@birminghamswifts.co.uk` | `Guiding club strategy, welfare, and inclusive community outreach.` | `assets/portrait_gabriel_stirling.jpg` |
+
+---
+
+### Tab 8: `Club_News`
+Controls news stories, race reports, and announcements on the News page.
+
+| title | date | category | summary | image | link |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `Swifts Take Over Cannon Hill Parkrun!` | `October 2026` | `Community` | `Over 45 Swifts runners and volunteers took over Cannon Hill parkrun.` | `assets/swifts_cannon_hill_parkrun_takeover.jpg` | `#` |
+
+---
+
+### Tab 9: `FAQs`
 Controls the expandable questions and answers accordion.
 
 | question | answer |

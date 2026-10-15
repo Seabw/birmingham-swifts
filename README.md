@@ -12,14 +12,25 @@ Modern, accessible, and high-performance website for **Birmingham Swifts Running
   * Rich typography pairing: `Outfit` (Headings) & `Plus Jakarta Sans` (Body).
   * High-resolution atmospheric photography and official Swifts logo assets.
 
-* **⚡️ Interactive Modules**:
+* **⚡️ Interactive Modules & CMS**:
+  * **📊 Google Sheets Headless CMS**: The site dynamically loads and populates weekly runs, news, coaches, committee, testimonials, and membership tiers directly from a live Google Spreadsheet. Committee updates appear instantly without touching code.
   * **Weekly Run Timetable & Day Filter**: Filter by Thursday Social (Main Run), Saturday Parkruns (Unofficial), and Sunday Long Runs (Unofficial).
-  * **Multi-Page Experience**: Dedicated pages for About Us, Weekly Runs, Club News, Members, and Join Us.
+  * **Multi-Page Experience**: Dedicated pages for About Us, Weekly Runs, Coaches & Leaders, Committee, Club News, Members, and Join Us.
   * **Taster Booking Modal**: Interactive sign-up dialog with instant feedback toast.
   * **Initiatives Spotlight**: Dedicated highlights for Couch to 5k (C25K) and Social/Pride calendar.
   * **Community Voices**: Authentic testimonials from beginners, marathoners, and ultra runners.
   * **Collapsible FAQ Accordion**: Instant answers to common beginner and club questions.
   * **Full Mobile & Tablet Responsiveness**: Optimized navigation and layouts across all viewport sizes.
+
+---
+
+## 📊 Live Google Sheets CMS
+
+The website is powered by a zero-backend **Google Sheets CMS engine** in [`script.js`](file:///Users/bo.wang/.gemini/antigravity-ide/scratch/birmingham-swifts/script.js). 
+
+* **Active Sheet**: [Connected Google Sheet](https://docs.google.com/spreadsheets/d/1tNdQuPdBsQifwQJttXNJwoZzH9H3bg5eKp2gaA0ajbw/edit) (`1tNdQuPdBsQifwQJttXNJwoZzH9H3bg5eKp2gaA0ajbw`).
+* **Live Sections**: Runs, Coaches, Run Leaders, Committee, News & Race Reports, Testimonials, Membership Tiers, and Top Announcement Banner.
+* **Guide**: See [`CMS_GOOGLE_SHEETS_GUIDE.md`](file:///Users/bo.wang/.gemini/antigravity-ide/scratch/birmingham-swifts/CMS_GOOGLE_SHEETS_GUIDE.md) for full tab schemas and committee instructions.
 
 ---
 
